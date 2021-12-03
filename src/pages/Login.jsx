@@ -4,6 +4,7 @@ import InputForm from "../components/InputForm";
 import Logo from "../components/Logo";
 import PasswordForm from "../components/PasswordForm";
 import Checkbox from "../components/Checkbox";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -19,13 +20,13 @@ const Login = () => {
             <InputForm title="Phone Number HP/Email" desc="Masukan no hp atau email" />
             <PasswordForm title="Password" desc="Masukan kata sandi" />
             <div className="flex justify-between items-center">
-              <Checkbox />
+              <Checkbox title="Remember me" />
               <a href="/" className="text-sm font-medium text-primaryColor underline">Forgot Password ?</a>
             </div>
             <div className="mt-8 ">
               <button className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full text-base font-medium">Login</button>
               <div className="mt-8 mx-auto text-center">
-                <a className="text-sm font-medium" href="/">Kamu Belum punya akun?</a> <a href="/" className="text-sm font-medium text-primaryColor underline">Sign up disini</a>
+                <Link className="text-sm font-medium" to="/register">Kamu belum punya akun?</Link> <Link to="/register" className="text-sm font-medium text-primaryColor underline">Sign up disini</Link>
               </div>
             </div>
           </form>

@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import bg from "../assets/background.png";
 import mhs from "../assets/mhs.svg";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -22,12 +23,12 @@ const LandingPage = () => {
             jumlah pengangguran pemuda di indonesia. Ayok bergabung bersama kami
             agar anda tidak menganggur lagi.
           </p>
-          <a
+          <Link
             className=" text-white bg-primaryColor inline-block px-[48px] py-[19px] rounded-full"
-            href="/"
+            to="/register"
           >
             Daftar Disini
-          </a>
+          </Link>
           <div className="flex mt-[30px]">
             <div className="flex-1">
               <h3 className="text-[40px] font-semibold text-secondaryColor">10K+</h3>

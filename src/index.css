@@ -817,6 +817,10 @@ select {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -874,6 +878,22 @@ select {
   margin-top: 100px;
 }
 
+.mr-2 {
+  margin-right: 12px;
+}
+
+.mr-1 {
+  margin-right: 8px;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-6 {
+  margin-bottom: 48px;
+}
+
 .block {
   display: block;
 }
@@ -904,6 +924,10 @@ select {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[1000px\] {
+  height: 1000px;
 }
 
 .w-\[20px\] {
@@ -1110,6 +1134,19 @@ select {
 
 .text-\[40px\] {
   font-size: 40px;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-\[14px\] {
+  font-size: 14px;
+}
+
+.text-\[13px\] {
+  font-size: 13px;
 }
 
 .font-bold {
