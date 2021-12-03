@@ -4,11 +4,15 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      container: {
+        center: true,
+      },
       colors: {
-        brand: "#FB6C37",
-        brand2: "#FF5107",
-        title: "#00004A",
-        sub: "#FFC700",
+        primaryColor: "#FB6C37",
+        secondaryColor: "#FF5107",
+        tertiaryColor: "#FFC700",
+        colorHeading: "#00004A",
+        colorParagraph: "#6B6B81",
       },
       spacing: {
         1: "8px",
@@ -23,5 +27,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms'),],
 };
