@@ -10,8 +10,8 @@ const Login = () => {
   return (
     <div
       className="bg-no-repeat bg-center h-screen"
-      style={{ backgroundImage: `url(${bg})`, backgroundSize: "100vw 100vh" }}>
-      <div className="container mx-auto">
+      style={{ backgroundImage: `url(${bg})`, backgroundSize: "100vw 100vh", overflowY: 'scroll' }}>
+      <div className="container mx-auto mb-6">
         <div className="flex justify-center pt-10">
           <Logo />
         </div>
