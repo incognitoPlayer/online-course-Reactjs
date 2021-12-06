@@ -44,11 +44,30 @@ const VerifyForgotPassword = () => {
           <form className="max-w-lg mx-auto">
             <p className="text-center">08123456xxxxx</p>
             <p className="text-center pt-2">Axxm Sxxth</p>
-            <div className="flex">
+            <div className="flex mt-3">
               <InputOtp />
               <InputOtp />
               <InputOtp />
               <InputOtp />
+            </div>
+            <p className="text-center text-colorParagraph mt-5 text-sm">
+              Kode akan kadaluarsa dalam 01:59
+            </p>
+            <div className="mt-3">
+              <div className="mx-auto text-center">
+                <span className="text-sm font-medium">
+                  Belum menerima kode?{" "}
+                </span>
+                <Link
+                  to="/register"
+                  className="text-sm font-medium text-primaryColor underline"
+                >
+                  Kirim ulang kode
+                </Link>
+              </div>
+              <button className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full mt-5 text-base font-medium">
+                Verify
+              </button>
             </div>
           </form>
         </Cards>
