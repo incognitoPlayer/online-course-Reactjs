@@ -7,7 +7,7 @@ const LandingPage = () => {
   return (
     <div
       className="bg-no-repeat bg-center h-screen"
-      style={{ backgroundImage: `url(${bg})`, backgroundSize: "100vw 100vh" }}>
+      style={{ backgroundImage: `url(${bg})`, backgroundSize: "100vw 100vh", overflowY: 'scroll' }}>
       <Navbar />
       <div className="container mx-auto flex mt-[60px]">
         <div className="flex-1">
