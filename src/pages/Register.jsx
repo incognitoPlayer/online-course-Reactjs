@@ -5,10 +5,37 @@ import Logo from "../components/Logo";
 import PasswordForm from "../components/PasswordForm";
 import Checkbox from "../components/Checkbox";
 import { Link } from "react-router-dom";
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const Register = () => {
+    const [helper, setHelper] = useState(null)
     const [show, setShow] = useState(false)
+    const [passwordConfirmation, setPasswordConfirmation] = useState('')
+    const [input, setInput] = useState({ username: '', email: '', password: '' })
+    useEffect(() => {
+        if (passwordConfirmation !== null && input.password !== "") {
+            if (passwordConfirmation !== input.password) {
+                setHelper("Password tidak cocok")
+            } else {
+                setHelper("Password cocok")
+            }
+        }
+
+    }, [input, passwordConfirmation])
+
+    const handleInput = (e) => {
+        let value = e.currentTarget.value
+        let name = e.currentTarget.name
+        if (name !== "password_confirmation") {
+            setInput({ ...input, [name]: value })
+        } else {
+            setPasswordConfirmation(value)
+        }
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(input);
+    }
     return (
         <div
             className="bg-no-repeat bg-center h-screen"
@@ -18,12 +45,13 @@ const Register = () => {
                     <Logo />
                 </div>
                 <Cards title="Ayo Daftar Sekarang!" desc="Daftarkan dirimu dan bergabung menjadi bagian dari kami para tokoh pemuda indonesia">
-                    <form className="max-w-lg mx-auto">
-                        <InputForm title="Username" desc="Masukan username kamu" />
-                        <InputForm title="Phone Number HP/Email" desc="Masukan nomer hp/email" />
-                        <PasswordForm title="Password" desc="Masukan kata sandi" show={show} onClick={() => setShow(!show)} />
-                        <PasswordForm title="Confirm Password" desc="Konfirmasi kata sandi" show={show} onClick={() => setShow(!show)} />
-                        <div className="flex">
+                    <form className="max-w-lg mx-auto" onSubmit={handleSubmit}>
+                        <InputForm title="Username" desc="Masukan username kamu" name="username" type="text" onChange={handleInput} value={input.username} />
+                        <InputForm title="Phone Number HP/Email" desc="Masukan nomer hp/email" name="email" type="email" onChange={handleInput} value={input.email} />
+                        <PasswordForm title="Password" desc="Masukan kata sandi" name="password" min="8" show={show} onChange={handleInput} onClick={() => setShow(!show)} value={input.password} />
+                        <PasswordForm title="Confirm Password" desc="Konfirmasi kata sandi" name="password_confirmation" min="8" onChange={handleInput} show={show} onClick={() => setShow(!show)} value={passwordConfirmation} />
+                        <span className={`${helper === "Password cocok" ? 'text-green-600' : 'text-red-600'} text-sm font-medium`}>{helper}</span>
+                        <div className="flex mt-5">
                             <Checkbox />
                             <p className="text-sm font-medium mr-1" href="/">I Accept</p>
                             <a href="/" className="text-sm font-medium text-primaryColor underline mr-1">Term & Conditions</a>
@@ -31,7 +59,7 @@ const Register = () => {
                             <a href="/" className="text-sm font-medium text-primaryColor underline">Privacy Policies.</a>
                         </div>
                         <div className="mt-8 ">
-                            <button className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full text-base font-medium">Register</button>
+                            <button className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full text-base font-medium" type="submit">Register</button>
                             <div className="mt-8 mx-auto text-center">
                                 <Link className="text-sm font-medium" to="/">Kamu sudah punya akun?</Link> <Link to="/Login" className="text-sm font-medium text-primaryColor underline">Login disini</Link>
                             </div>

@@ -28,6 +28,7 @@ const Login = () => {
             <InputForm
               title="Phone Number HP/Email"
               desc="Masukan no hp atau email"
+              type="email"
             />
             <PasswordForm title="Password" desc="Masukan kata sandi" />
             <div className="flex justify-between items-center">
