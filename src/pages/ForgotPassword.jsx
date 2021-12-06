@@ -1,12 +1,10 @@
+import { Link } from "react-router-dom";
 import bg from "../assets/background.png";
 import Cards from "../components/Cards";
 import InputForm from "../components/InputForm";
 import Logo from "../components/Logo";
-import PasswordForm from "../components/PasswordForm";
-import Checkbox from "../components/Checkbox";
-import { Link } from "react-router-dom";
 
-const Login = () => {
+const ForgotPassword = () => {
   return (
     <div
       className="bg-no-repeat bg-center h-screen"
@@ -20,38 +18,47 @@ const Login = () => {
         <div className="flex justify-center pt-10">
           <Logo />
         </div>
+        <div className="max-w-xl mx-auto mt-1 pt-4">
+          <Link to="/login" className="flex items-center font-medium">
+            <svg
+              class="w-3 h-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+            Back
+          </Link>
+        </div>
         <Cards
-          title="welcome Back!"
-          desc="Masukan number handphone/email dan passwordmu untuk masuk ke halaman dashboard"
+          title="Cari Akunmu"
+          desc="Cari akunmu dengan nomer hp/emailmu yang sudah terdaftar untuk mereset kembali passwordmu"
         >
           <form className="max-w-lg mx-auto">
             <InputForm
-              title="Phone Number HP/Email"
+              title="Masukan Phone Number HP/Email"
               desc="Masukan no hp atau email"
             />
-            <PasswordForm title="Password" desc="Masukan kata sandi" />
-            <div className="flex justify-between items-center">
-              <Checkbox title="Remember me" />
-              <Link
-                to="/forgotpassword"
-                className="text-sm font-medium text-primaryColor underline"
-              >
-                Forgot Password ?
-              </Link>
-            </div>
-            <div className="mt-8 ">
+            <div className="mt-3">
               <button className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full text-base font-medium">
-                Login
+                Cari Akun
               </button>
               <div className="mt-8 mx-auto text-center">
-                <Link className="text-sm font-medium" to="/register">
-                  Kamu belum punya akun?
-                </Link>{" "}
+                <span className="text-sm font-medium">
+                  Tidak bisa menemukan akunmu?{" "}
+                </span>
                 <Link
                   to="/register"
                   className="text-sm font-medium text-primaryColor underline"
                 >
-                  Sign up disini
+                  Menyerah saja dan buat akun baru
                 </Link>
               </div>
             </div>
@@ -62,4 +69,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgotPassword;
