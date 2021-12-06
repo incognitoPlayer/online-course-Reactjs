@@ -812,8 +812,8 @@ select {
 
 @media (min-width: 1024px) {
   .container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
@@ -838,26 +838,6 @@ select {
   margin-right: auto;
 }
 
-.mt-\[60px\] {
-  margin-top: 60px;
-}
-
-.mt-4 {
-  margin-top: 24px;
-}
-
-.mb-5 {
-  margin-bottom: 32px;
-}
-
-.mt-\[30px\] {
-  margin-top: 30px;
-}
-
-.mt-\[100px\] {
-  margin-top: 100px;
-}
-
 .mt-8 {
   margin-top: 2rem;
 }
@@ -866,12 +846,32 @@ select {
   margin-bottom: 12px;
 }
 
+.mb-5 {
+  margin-bottom: 32px;
+}
+
 .ml-2 {
   margin-left: 12px;
 }
 
 .mb-4 {
   margin-bottom: 24px;
+}
+
+.mt-\[60px\] {
+  margin-top: 60px;
+}
+
+.mt-4 {
+  margin-top: 24px;
+}
+
+.mt-\[30px\] {
+  margin-top: 30px;
+}
+
+.mt-\[100px\] {
+  margin-top: 100px;
 }
 
 .mb-6 {
@@ -898,10 +898,6 @@ select {
   display: inline-flex;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .h-\[20px\] {
   height: 20px;
 }
@@ -912,6 +908,10 @@ select {
 
 .h-\[104px\] {
   height: 104px;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .w-\[20px\] {
@@ -950,10 +950,6 @@ select {
   justify-content: space-between;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -964,6 +960,10 @@ select {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .border {
@@ -989,11 +989,6 @@ select {
   border-color: rgba(251, 108, 55, var(--tw-border-opacity));
 }
 
-.bg-primaryColor {
-  --tw-bg-opacity: 1;
-  background-color: rgba(251, 108, 55, var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -1004,22 +999,17 @@ select {
   background-color: rgba(250, 250, 250, var(--tw-bg-opacity));
 }
 
+.bg-primaryColor {
+  --tw-bg-opacity: 1;
+  background-color: rgba(251, 108, 55, var(--tw-bg-opacity));
+}
+
 .bg-center {
   background-position: center;
 }
 
 .bg-no-repeat {
   background-repeat: no-repeat;
-}
-
-.px-\[48px\] {
-  padding-left: 48px;
-  padding-right: 48px;
-}
-
-.py-\[19px\] {
-  padding-top: 19px;
-  padding-bottom: 19px;
 }
 
 .px-10 {
@@ -1057,13 +1047,23 @@ select {
   padding-right: 2rem;
 }
 
+.px-\[48px\] {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.py-\[19px\] {
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
 .px-4 {
   padding-left: 24px;
   padding-right: 24px;
 }
 
-.pl-6 {
-  padding-left: 48px;
+.pl-1 {
+  padding-left: 8px;
 }
 
 .pt-10 {
@@ -1072,24 +1072,6 @@ select {
 
 .text-center {
   text-align: center;
-}
-
-.text-\[70px\] {
-  font-size: 70px;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-\[40px\] {
-  font-size: 40px;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .text-2xl {
@@ -1110,16 +1092,34 @@ select {
   line-height: 1.25rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-\[70px\] {
+  font-size: 70px;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-\[40px\] {
+  font-size: 40px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
 .font-medium {
   font-weight: 500;
 }
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-bold {
-  font-weight: 700;
 }
 
 .leading-tight {
@@ -1131,9 +1131,9 @@ select {
   color: rgba(0, 0, 74, var(--tw-text-opacity));
 }
 
-.text-tertiaryColor {
+.text-colorParagraph {
   --tw-text-opacity: 1;
-  color: rgba(255, 199, 0, var(--tw-text-opacity));
+  color: rgba(107, 107, 129, var(--tw-text-opacity));
 }
 
 .text-primaryColor {
@@ -1141,9 +1141,9 @@ select {
   color: rgba(251, 108, 55, var(--tw-text-opacity));
 }
 
-.text-colorParagraph {
+.text-tertiaryColor {
   --tw-text-opacity: 1;
-  color: rgba(107, 107, 129, var(--tw-text-opacity));
+  color: rgba(255, 199, 0, var(--tw-text-opacity));
 }
 
 .text-white {
