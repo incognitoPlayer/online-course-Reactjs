@@ -882,6 +882,10 @@ select {
   margin-right: 8px;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .block {
   display: block;
 }
