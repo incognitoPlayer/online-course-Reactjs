@@ -60,7 +60,7 @@ const LandingPage = () => {
         </div>
         <div className="flex-1 ">
           <img
-            className="mt-[100px] pl-1"
+            className="mt-[100px]  pl-1"
             src={mhs}
             height="100%"
             alt="mahasiswa"
