@@ -5,8 +5,10 @@ import Logo from "../components/Logo";
 import PasswordForm from "../components/PasswordForm";
 import Checkbox from "../components/Checkbox";
 import { Link } from "react-router-dom";
+import { useState } from "react"
 
 const Register = () => {
+    const [show, setShow] = useState(false)
     return (
         <div
             className="bg-no-repeat bg-center h-screen"
@@ -19,8 +21,8 @@ const Register = () => {
                     <form className="max-w-lg mx-auto">
                         <InputForm title="Username" desc="Masukan username kamu" />
                         <InputForm title="Phone Number HP/Email" desc="Masukan nomer hp/email" />
-                        <PasswordForm title="Password" desc="Masukan kata sandi" />
-                        <PasswordForm title="Confirm Password" desc="Konfirmasi kata sandi" />
+                        <PasswordForm title="Password" desc="Masukan kata sandi" show={show} onClick={() => setShow(!show)} />
+                        <PasswordForm title="Confirm Password" desc="Konfirmasi kata sandi" show={show} onClick={() => setShow(!show)} />
                         <div className="flex">
                             <Checkbox />
                             <p className="text-sm font-medium mr-1" href="/">I Accept</p>

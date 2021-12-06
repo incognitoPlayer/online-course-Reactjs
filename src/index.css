@@ -984,10 +984,6 @@ select {
   border-color: rgba(228, 228, 228, var(--tw-border-opacity));
 }
 
-.border-transparent {
-  border-color: transparent;
-}
-
 .border-primaryColor {
   --tw-border-opacity: 1;
   border-color: rgba(251, 108, 55, var(--tw-border-opacity));
