@@ -898,8 +898,8 @@ select {
   margin-right: 8px;
 }
 
-.mt-5 {
-  margin-top: 32px;
+.mt-2 {
+  margin-top: 12px;
 }
 
 .block {
@@ -926,8 +926,8 @@ select {
   height: 48px;
 }
 
-.h-20 {
-  height: 5rem;
+.h-\[100px\] {
+  height: 100px;
 }
 
 .h-\[104px\] {
@@ -942,37 +942,6 @@ select {
   height: 16px;
 }
 
-<<<<<<< Updated upstream
-=======
-.h-96 {
-  height: 24rem;
-}
-
-.h-1\/2 {
-  height: 50%;
-}
-
-.h-80 {
-  height: 20rem;
-}
-
-.h-52 {
-  height: 13rem;
-}
-
-.h-24 {
-  height: 6rem;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
-.h-\[100px\] {
-  height: 100px;
-}
-
->>>>>>> Stashed changes
 .w-\[20px\] {
   width: 20px;
 }
@@ -981,16 +950,12 @@ select {
   width: 100%;
 }
 
-.w-10 {
-  width: 2.5rem;
+.w-\[100px\] {
+  width: 100px;
 }
 
 .w-3 {
   width: 16px;
-}
-
-.w-\[100px\] {
-  width: 100px;
 }
 
 .max-w-xl {
@@ -1062,6 +1027,11 @@ select {
 .border-primaryColor {
   --tw-border-opacity: 1;
   border-color: rgba(251, 108, 55, var(--tw-border-opacity));
+}
+
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgba(239, 68, 68, var(--tw-border-opacity));
 }
 
 .bg-white {
@@ -1175,6 +1145,11 @@ select {
   line-height: 1.25rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1191,21 +1166,6 @@ select {
 
 .text-\[40px\] {
   font-size: 40px;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .font-bold {

@@ -5,8 +5,10 @@ import Logo from "../components/Logo";
 import PasswordForm from "../components/PasswordForm";
 import Checkbox from "../components/Checkbox";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Login = () => {
+  const [show, setShow] = useState(false)
   return (
     <div
       className="bg-no-repeat bg-center h-screen"
@@ -30,7 +32,7 @@ const Login = () => {
               desc="Masukan no hp atau email"
               type="email"
             />
-            <PasswordForm title="Password" desc="Masukan kata sandi" />
+            <PasswordForm title="Password" desc="Masukan kata sandi" min="8" show={show} onClick={() => setShow(!show)} />
             <div className="flex justify-between items-center">
               <Checkbox title="Remember me" />
               <Link
