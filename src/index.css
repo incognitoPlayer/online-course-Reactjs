@@ -453,6 +453,11 @@ textarea {
   resize: vertical;
 }
 
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 1;
   color: #9ca3af;
@@ -628,6 +633,11 @@ video {
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   border-color: #2563eb;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #6b7280;
+  opacity: 1;
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
@@ -898,10 +908,6 @@ select {
   margin-right: 8px;
 }
 
-.mt-5 {
-  margin-top: 32px;
-}
-
 .block {
   display: block;
 }
@@ -926,8 +932,8 @@ select {
   height: 48px;
 }
 
-.h-20 {
-  height: 5rem;
+.h-\[100px\] {
+  height: 100px;
 }
 
 .h-\[104px\] {
@@ -942,37 +948,6 @@ select {
   height: 16px;
 }
 
-<<<<<<< Updated upstream
-=======
-.h-96 {
-  height: 24rem;
-}
-
-.h-1\/2 {
-  height: 50%;
-}
-
-.h-80 {
-  height: 20rem;
-}
-
-.h-52 {
-  height: 13rem;
-}
-
-.h-24 {
-  height: 6rem;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
-.h-\[100px\] {
-  height: 100px;
-}
-
->>>>>>> Stashed changes
 .w-\[20px\] {
   width: 20px;
 }
@@ -981,16 +956,12 @@ select {
   width: 100%;
 }
 
-.w-10 {
-  width: 2.5rem;
+.w-\[100px\] {
+  width: 100px;
 }
 
 .w-3 {
   width: 16px;
-}
-
-.w-\[100px\] {
-  width: 100px;
 }
 
 .max-w-xl {
@@ -1031,10 +1002,6 @@ select {
 
 .rounded-lg {
   border-radius: 0.5rem;
-}
-
-.rounded {
-  border-radius: 0.25rem;
 }
 
 .rounded-full {
@@ -1175,6 +1142,11 @@ select {
   line-height: 1.25rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1191,21 +1163,6 @@ select {
 
 .text-\[40px\] {
   font-size: 40px;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -1287,6 +1244,11 @@ select {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-primaryColor:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(251, 108, 55, var(--tw-ring-opacity));
 }
 
 .focus\:ring-offset-0:focus {
