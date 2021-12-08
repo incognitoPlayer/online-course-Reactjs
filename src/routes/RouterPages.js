@@ -5,6 +5,7 @@ import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import ForgotPassword from "../pages/ForgotPassword";
 import VerifyForgotPassword from "../pages/VerifyForgotPassword";
+import VerifyRegister from "../pages/VerifyRegister";
 import ResetPassword from "../pages/ResetPassword";
 
 const RouterPages = () => {
@@ -18,6 +19,7 @@ const RouterPages = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/verifyforgotpassword" element={<VerifyForgotPassword />} />
+          <Route path="/verifyregister" element={<VerifyRegister />} />
           <Route path="/resetpassword" element={<ResetPassword />} />
         </Routes>
       </Router>

@@ -42,8 +42,6 @@ const VerifyForgotPassword = () => {
           desc="Kami sudah menemukan akunmu dan kami sudah mengirimkan kode ke nomer di bawah ini"
         >
           <form className="max-w-lg mx-auto">
-            <p className="text-center">adaxxxith@gmail.com</p>
-            <p className="text-center pt-2">Axxm Sxxth</p>
             <div className="flex mt-3">
               <InputOtp max="1" />
               <InputOtp max="1"/>
