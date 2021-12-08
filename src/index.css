@@ -1249,6 +1249,11 @@ select {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
+.focus\:ring-primaryColor:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(251, 108, 55, var(--tw-ring-opacity));
+}
+
 .focus\:ring-offset-0:focus {
   --tw-ring-offset-width: 0px;
 }

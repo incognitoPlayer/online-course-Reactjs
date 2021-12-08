@@ -1,9 +1,9 @@
 const InputOtp = () => {
   return (
     <input
-      className="m-2 flex-1 border h-[100px] w-[100px] text-center rounded text-5xl"
-      type="text"
-      maxlength="1"
+      className="m-2 bg-[#FAFAFA] border-[#d8d8d8] flex-1 border h-[100px] w-[100px] text-center text-5xl focus:ring-0 focus:ring-offset-0 rounded-lg focus:ring-primaryColor focus:border-primaryColor"
+      type="number"
+      maxLength="1"
     />
   );
 };
