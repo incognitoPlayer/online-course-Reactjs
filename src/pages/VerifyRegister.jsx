@@ -14,7 +14,7 @@ const VerifyForgotPassword = () => {
         overflowY: "scroll",
       }}
     >
-      <div className="container mx-auto mb-6">
+      <div className="container mx-auto mb-6 lg:mb-1">
         <div className="flex justify-center pt-10">
           <Logo />
         </div>
@@ -44,14 +44,14 @@ const VerifyForgotPassword = () => {
           <form className="max-w-lg mx-auto">
             <div className="flex mt-3">
               <InputOtp max="1" />
-              <InputOtp max="1"/>
-              <InputOtp max="1"/>
-              <InputOtp max="1"/>
+              <InputOtp max="1" />
+              <InputOtp max="1" />
+              <InputOtp max="1" />
             </div>
-            <p className="text-center text-colorParagraph mt-5 text-sm">
+            <p className="text-center text-colorParagraph mt-5 lg:mt-2 text-sm">
               Kode akan kadaluarsa dalam 01:59
             </p>
-            <div className="mt-3">
+            <div className="mt-3 lg:mt-2">
               <div className="mx-auto text-center">
                 <span className="text-sm font-medium">
                   Belum menerima kode?{" "}
@@ -63,7 +63,7 @@ const VerifyForgotPassword = () => {
                   Kirim ulang kode
                 </Link>
               </div>
-              <button className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full mt-5 text-base font-medium">
+              <button className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full mt-5 lg:mt-3 text-base lg:text-sm font-medium">
                 Verify
               </button>
             </div>

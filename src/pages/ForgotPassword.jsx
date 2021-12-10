@@ -47,16 +47,16 @@ const ForgotPassword = () => {
               desc="Masukan no hp atau email"
             />
             <div className="mt-3">
-              <button className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full text-base font-medium">
+              <button className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full text-base lg:text-sm font-medium">
                 Cari Akun
               </button>
-              <div className="mt-8 mx-auto text-center">
-                <span className="text-sm font-medium">
+              <div className="mt-8 lg:mt-4 mx-auto text-center">
+                <span className="text-sm lg:text-xs font-medium">
                   Tidak bisa menemukan akunmu?{" "}
                 </span>
                 <Link
                   to="/register"
-                  className="text-sm font-medium text-primaryColor underline"
+                  className="text-sm lg:text-xs font-medium text-primaryColor underline"
                 >
                   Menyerah saja dan buat akun baru
                 </Link>
