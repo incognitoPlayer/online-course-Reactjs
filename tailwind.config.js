@@ -1,12 +1,12 @@
 module.exports = {
-  mode: "jit",
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./src/**/*.{js,jsx}",
+  ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
-      container: {
-        center: true,
-      },
       colors: {
         primaryColor: "#FB6C37",
         secondaryColor: "#FF5107",
@@ -24,8 +24,7 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [require("@tailwindcss/forms")],
-};
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
+}

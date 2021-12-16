@@ -4,7 +4,7 @@ import InputForm from "../components/InputForm";
 import Logo from "../components/Logo";
 import PasswordForm from "../components/PasswordForm";
 import Checkbox from "../components/Checkbox";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -19,6 +19,7 @@ const Register = () => {
     password: null,
     passwordConfirmation: null,
   });
+  const navigate = useNavigate()
   useEffect(() => {
     if (passwordConfirmation !== null && input.password !== "") {
       if (passwordConfirmation !== input.password) {
@@ -56,6 +57,7 @@ const Register = () => {
             input
           );
           console.log(response);
+          navigate('/login')
         } catch (err) {
           console.log(err.message);
         }
@@ -130,39 +132,39 @@ const Register = () => {
             </span>
             <div className="flex mt-5 lg:mt-3 items-center">
               <Checkbox />
-              <p className="text-sm lg:text-xs font-medium mr-1" href="/">
+              <p className="2xl:text-sm lg:text-xs font-medium mr-1" href="/">
                 I Accept
               </p>
               <a
                 href="/"
-                className="text-sm lg:text-xs font-medium text-primaryColor underline mr-1"
+                className="2xl:text-sm lg:text-xs font-medium text-primaryColor underline mr-1"
               >
                 Term & Conditions
               </a>
-              <p className="text-sm lg:text-xs font-medium mr-1" href="/">
+              <p className="2xl:text-sm lg:text-xs font-medium mr-1" href="/">
                 and
               </p>
               <a
                 href="/"
-                className="text-sm lg:text-xs font-medium text-primaryColor underline"
+                className="2xl:text-sm lg:text-xs font-medium text-primaryColor underline"
               >
                 Privacy Policies.
               </a>
             </div>
-            <div className="mt-8 lg:mt-4">
+            <div className="2xl:mt-8 lg:mt-4">
               <button
-                className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full text-base lg:text-sm font-medium"
+                className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full 2xl:text-base lg:text-sm font-medium"
                 type="submit"
               >
                 Register
               </button>
               <div className="mt-8 lg:mt-4 mx-auto text-center">
-                <Link className="text-sm lg:text-xs font-medium" to="/">
+                <Link className="2xl:text-sm lg:text-xs font-medium" to="/">
                   Kamu sudah punya akun?
                 </Link>{" "}
                 <Link
                   to="/Login"
-                  className="text-sm lg:text-xs font-medium text-primaryColor underline"
+                  className="2xl:text-sm lg:text-xs font-medium text-primaryColor underline"
                 >
                   Login disini
                 </Link>

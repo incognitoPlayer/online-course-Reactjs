@@ -1,11 +1,34 @@
-const InputOtp = (props) => {
+import { useState } from "react";
+import OtpInput from 'react-otp-input';
+
+const InputOtp = () => {
+  const [otp, setotp] = useState('')
   return (
-    <input
-      className="m-2 bg-[#FAFAFA] border-[#d8d8d8] flex-1 border h-[100px] w-[100px] text-center text-5xl focus:ring-0 focus:ring-offset-0 rounded-lg focus:ring-primaryColor focus:border-primaryColor"
-      type="text"
-      maxLength={props.max} required
+    <>
+      <OtpInput
+      value={otp}
+      onChange={setotp}
+      shouldAutoFocus={true}
+      inputStyle={{
+        border: "1px solid #d8d8d8",
+        borderRadius: "8px",
+        width: "80px",
+        height: "80px",
+        fontSize: "40px",
+        fontWeight: "400",
+        caretColor: "#FB6C37",
+        backgroundColor: "#FAFAFA",
+        margin: "15px"
+      }} 
+      focusStyle={{
+        border: "1px solid #FB6C37",
+        boxShadow: "none"
+      }}
+      disabled={false}
+      required
+      isInputNum
     />
+    </>
   );
 };
-
 export default InputOtp;

@@ -42,18 +42,15 @@ const VerifyForgotPassword = () => {
           desc="Kami sudah menemukan akunmu dan kami sudah mengirimkan kode ke nomer di bawah ini"
         >
           <form className="max-w-lg mx-auto">
-            <p className="text-center lg:text-sm">adaxxxith@gmail.com</p>
-            <p className="text-center lg:text-sm pt-2 lg:pt-1">Axxm Sxxth</p>
-            <div className="flex mt-3 lg:mt-1">
-              <InputOtp max="1" />
-              <InputOtp max="1" />
-              <InputOtp max="1" />
-              <InputOtp max="1" />
+            <p className="text-center 2xl:text-base lg:text-sm">adaxxxith@gmail.com</p>
+            <p className="text-center 2xl:text-base lg:text-sm pt-2 lg:pt-1">Axxm Sxxth</p>
+            <div className="flex 2xl:mt-3 lg:mt-1 justify-center ">
+              <InputOtp />
             </div>
-            <p className="text-center text-colorParagraph mt-5 lg:mt-1 text-sm">
+            <p className="text-center text-colorParagraph 2xl:mt-5 lg:mt-1 text-sm">
               Kode akan kadaluarsa dalam 01:59
             </p>
-            <div className="mt-3 lg:mt-1">
+            <div className="2xl:mt-3 lg:mt-1">
               <div className="mx-auto text-center">
                 <span className="text-sm font-medium">
                   Belum menerima kode?{" "}
@@ -65,7 +62,7 @@ const VerifyForgotPassword = () => {
                   Kirim ulang kode
                 </Link>
               </div>
-              <button className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full mt-5 lg:mt-3 text-base lg:text-sm font-medium">
+              <button className="bg-primaryColor hover:bg-[#f05d27] text-white py-2 px-4 rounded-full w-full 2xl:mt-5 lg:mt-3 text-base lg:text-sm font-medium">
                 Verify
               </button>
             </div>

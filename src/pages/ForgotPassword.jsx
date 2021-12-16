@@ -19,7 +19,7 @@ const ForgotPassword = () => {
           <Logo />
         </div>
         <div className="max-w-xl mx-auto mt-1 pt-4">
-          <Link to="/login" className="flex items-center font-medium">
+          <Link to="/login" className="flex items-center font-medium mb-4">
             <svg
               className="w-3 h-3"
               fill="none"
@@ -41,7 +41,7 @@ const ForgotPassword = () => {
           title="Cari Akunmu"
           desc="Cari akunmu dengan nomer hp/emailmu yang sudah terdaftar untuk mereset kembali passwordmu"
         >
-          <form className="max-w-lg mx-auto">
+          <form className="max-w-lg mx-auto mt-5">
             <InputForm
               title="Masukan Phone Number HP/Email"
               desc="Masukan no hp atau email"
@@ -51,12 +51,12 @@ const ForgotPassword = () => {
                 Cari Akun
               </button>
               <div className="mt-8 lg:mt-4 mx-auto text-center">
-                <span className="text-sm lg:text-xs font-medium">
+                <span className="2xl:text-sm lg:text-xs font-medium">
                   Tidak bisa menemukan akunmu?{" "}
                 </span>
                 <Link
                   to="/register"
-                  className="text-sm lg:text-xs font-medium text-primaryColor underline"
+                  className="2xl:text-sm lg:text-xs font-medium text-primaryColor underline"
                 >
                   Menyerah saja dan buat akun baru
                 </Link>

@@ -5,14 +5,14 @@ const PasswordForm = (props) => {
   return (
     <>
       <label
-        className="block text-colorHeading text-sm lg:text-xs font-medium mb-2"
+        className="block text-colorHeading 2xl:text-sm lg:text-xs font-medium mb-2"
         htmlFor="password"
       >
         {props.title}
       </label>
       <div className="relative">
         <input
-          className="bg-[#FAFAFA] border rounded-lg lg:text-xs text-[15px] font-regular w-full h-[45px] py-2 px-3 text-colorHeading leading-tight focus:outline-none focus:shadow-outline focus:border-primaryColor border-[#e4e4e4] focus:ring-0 mb-4 "
+          className="bg-[#FAFAFA] border rounded-lg lg:text-xs 2xl:text-[15px] font-regular w-full h-[45px] py-2 px-3 text-colorHeading leading-tight focus:outline-none focus:shadow-outline focus:border-primaryColor border-[#e4e4e4] focus:ring-0 mb-4 "
           type={props.show ? "" : "password"}
           placeholder={props.desc}
           value={props.value}
