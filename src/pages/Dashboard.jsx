@@ -1,81 +1,18 @@
-import Logo from "../components/Logo";
-import avatar from "../assets/avatar.svg";
 import practice from "../assets/practice.svg";
 import challenge from "../assets/challenge.svg";
 import event from "../assets/event.svg";
 import tree from "../assets/tree.svg";
-import mail from "../assets/mail.svg";
-import notif from "../assets/notif.svg";
 import adam from "../assets/adam.svg";
 import rank from "../assets/rank.svg";
 import iconChallenge from "../assets/iconChallenge.svg";
+import Navbar from "../components/Navbar";
 
 const Dashboard = () => {
   return (
     <div className="bg-no-repeat bg-center h-screen">
-      <div className="container mx-auto flex justify-between items-center py-5 h-[80px]">
-        <Logo />
-        <div className="flex justify-center items-center ">
-          <a
-            className="px-10 py-4 text-base lg:text-sm font-medium text-colorHeading"
-            href="/"
-          >
-            My Dashboard
-          </a>
-          <div class="px-10 group inline-block relative">
-            <a class=" py-4 text-base lg:text-sm text-colorParagraph inline-flex items-center">
-              Productivity
-              <svg
-                class="fill-current h-3 w-3"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-              </svg>
-            </a>
-            <ul class="absolute hidden text-colorParagraph pt-1 group-hover:block">
-              <li class="">
-                <a
-                  class="rounded-t lg:text-sm hover:text-[#00004A] bg-white hover:bg-[#FEF7EC] py-2 px-4 block whitespace-no-wrap"
-                  href="#"
-                >
-                  Practice
-                </a>
-              </li>
-              <li class="">
-                <a
-                  class="bg-white lg:text-sm hover:text-[#00004A] hover:bg-[#FEF7EC] py-2 px-4 block whitespace-no-wrap"
-                  href="#"
-                >
-                  Challenge
-                </a>
-              </li>
-              <li class="">
-                <a
-                  class="rounded-b lg:text-sm hover:text-[#00004A] bg-white hover:bg-[#FEF7EC] py-2 px-4 block whitespace-no-wrap"
-                  href="#"
-                >
-                  Events
-                </a>
-              </li>
-            </ul>
-          </div>
-          <a
-            className="px-10 py-4 text-base lg:text-sm text-colorParagraph "
-            href="/"
-          >
-            Leaderboard
-          </a>
-        </div>
-        <div className="flex items-center w-1/5 justify-between">
-          <img src={mail} alt="mail" />
-          <img src={notif} alt="mail" />
-          <img src={avatar} alt="avatar" />
-          <p>Adam Smith</p>
-        </div>
-      </div>
+      <Navbar profile="yes" />
 
-      <div className="flex h-[calc(100vh-80px)]  ">
+      <div className="flex lg:h-[calc(100vh-80px)] h-[calc(100vh-104px)]">
         <div
           style={{
             backgroundImage: `url(${tree})`,

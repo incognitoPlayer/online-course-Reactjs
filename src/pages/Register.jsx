@@ -7,6 +7,7 @@ import Checkbox from "../components/Checkbox";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Modal from "../components/Modal";
 
 const Register = () => {
   const [helper, setHelper] = useState(null);
@@ -19,7 +20,18 @@ const Register = () => {
     password: null,
     passwordConfirmation: null,
   });
-  const navigate = useNavigate()
+  let [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+    navigate("/login");
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  const navigate = useNavigate();
   useEffect(() => {
     if (passwordConfirmation !== null && input.password !== "") {
       if (passwordConfirmation !== input.password) {
@@ -57,7 +69,7 @@ const Register = () => {
             input
           );
           console.log(response);
-          navigate('/login')
+          openModal();
         } catch (err) {
           console.log(err.message);
         }
@@ -173,6 +185,7 @@ const Register = () => {
           </form>
         </Cards>
       </div>
+      <Modal isOpen={isOpen} openModal={openModal} closeModal={closeModal} />
     </div>
   );
 };

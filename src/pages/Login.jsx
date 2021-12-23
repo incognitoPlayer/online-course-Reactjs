@@ -15,7 +15,7 @@ const Login = () => {
     password: "",
   });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleInput = (e) => {
     let value = e.target.value;
@@ -32,7 +32,7 @@ const Login = () => {
         input
       );
       console.log(data);
-        navigate('/dashboard')
+      navigate("/dashboard");
     } catch (error) {
       console.log(error);
     }
@@ -91,7 +91,10 @@ const Login = () => {
                 Login
               </button>
               <div className="2xl:mt-8 lg:mt-4 mx-auto text-center">
-                <Link className="2xl:text-sm lg:text-xs font-medium" to="/register">
+                <Link
+                  className="2xl:text-sm lg:text-xs font-medium"
+                  to="/register"
+                >
                   Kamu belum punya akun?
                 </Link>{" "}
                 <Link
