@@ -6,9 +6,13 @@ import notif from "../assets/notif.svg";
 
 const Navbar = ({ profile }) => {
   return (
-    <div className="container mx-auto flex justify-between items-center py-5 h-[104px] lg:h-[80px]">
+    <div
+      className={` ${
+        profile ? "bg-white" : ""
+      } container mx-auto flex justify-between items-center py-5 h-[104px] lg:h-[80px]`}
+    >
       <Logo />
-      {profile === "yes" ? (
+      {profile ? (
         <>
           <div className="flex justify-center items-center ">
             <a

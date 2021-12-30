@@ -106,7 +106,7 @@ const Register = () => {
               value={input.username}
             />
             <InputForm
-              title="Phone Number HP/Email"
+              title="Email"
               desc="Masukan nomer hp/email"
               name="email"
               type="email"

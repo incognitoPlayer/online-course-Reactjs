@@ -15,6 +15,7 @@ import alicia from "../assets/alicia.svg";
 import eliza from "../assets/eliza.svg";
 
 import Footer from "../components/Footer";
+import Newsletter from "../components/Newsletter";
 
 const LandingPage = () => {
   const [statistic, setStatistic] = useState([]);
@@ -292,9 +293,8 @@ const LandingPage = () => {
       </div>
 
       {/* Section 6 */}
-      
 
-      {/* Section 7 */}
+      <Newsletter />
       <Footer />
     </>
   );

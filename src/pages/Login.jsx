@@ -57,7 +57,7 @@ const Login = () => {
         >
           <form className="max-w-lg mx-auto" onSubmit={handleSubmit}>
             <InputForm
-              title="Phone Number HP/Email"
+              title="Email"
               desc="Masukan no hp atau email"
               type="email"
               name="email"

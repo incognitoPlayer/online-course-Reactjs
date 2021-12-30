@@ -6,11 +6,13 @@ import adam from "../assets/adam.svg";
 import rank from "../assets/rank.svg";
 import iconChallenge from "../assets/iconChallenge.svg";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-no-repeat bg-center h-screen">
-      <Navbar profile="yes" />
+      <Navbar profile />
 
       <div className="flex lg:h-[calc(100vh-80px)] h-[calc(100vh-104px)]">
         <div
@@ -48,7 +50,10 @@ const Dashboard = () => {
               <p className="text-base mt-[20px] text-colorParagraph">
                 Tersedia 30+ Practice yang bisa kamu kerjakan sekarang
               </p>
-              <button className="bg-white transition duration-500 hover:bg-[#f05d27] hover:text-white text-primaryColor border-primaryColor border-[1px] py-2 px-4 rounded-full w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
+              <button
+                className="bg-white transition duration-500 hover:bg-[#f05d27] hover:text-white text-primaryColor border-primaryColor border-[1px] py-2 px-4 rounded-full w-full 2xl:text-base lg:text-sm font-medium mt-[32px]"
+                onClick={() => navigate("/practice")}
+              >
                 Mulai Kerjakan
               </button>
             </div>
