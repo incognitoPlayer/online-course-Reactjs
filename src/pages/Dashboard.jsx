@@ -18,31 +18,32 @@ const Dashboard = () => {
         <div
           style={{
             backgroundImage: `url(${tree})`,
+            backgroundSize: "100%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "bottom",
             backgroundColor: "#F5F6FB",
           }}
-          className="w-3/4 px-[5rem]"
+          className="w-3/4 lg:px-[5rem] 2xl:px-[7rem]"
         >
           <h1
-            className="lg:text-[30px] 2xl:text-[56px] text-colorHeading mt-3 font-medium text-title"
+            className="lg:text-[30px] 2xl:text-[40px] text-colorHeading mt-[64px] font-medium text-title"
             style={{ lineHeight: 1.2 }}
           >
             Halo, Selamat Pagi!
           </h1>
           <h1
-            className="lg:text-[30px] 2xl:text-[56px] text-primaryColor mt-2 font-medium text-title"
+            className="lg:text-[30px] 2xl:text-[40px] text-primaryColor mt-2 mb-4 font-medium text-title"
             style={{ lineHeight: 1.2 }}
           >
             Adam Smith 👋
           </h1>
 
-          <p className="mt-4 mb-5 lg:mb-4 lg:mt-2 text-lg lg:text-[16px] 2xl:text-base text-colorParagraph ">
+          <p className="2xl:mb-10 lg:mb-4 lg:mt-2 text-lg lg:text-[16px] 2xl:text-base text-colorParagraph ">
             Mau belajar apa kamu hari ini?
           </p>
 
           <div className="flex mt-[30px] lg:mt-[20px] gap-10">
-            <div className="flex-1 bg-white border-[1px] border-transparent hover:shadow-2xl p-4 rounded-xl hover:border-primaryColor hover:border-[1px] transition duration-300">
+            <div className="flex-1 bg-white border-[1px] border-transparent hover:shadow-cardShadow p-4 rounded-3xl hover:border-primaryColor hover:border-[1px] transition duration-300">
               <div className="flex items-center ">
                 <img src={practice} alt="" />
                 <p className="ml-3 text-lg font-medium">30+ Practice</p>
@@ -57,7 +58,7 @@ const Dashboard = () => {
                 Mulai Kerjakan
               </button>
             </div>
-            <div className="flex-1 bg-white border-[1px] border-transparent hover:shadow-2xl p-4 rounded-xl hover:border-primaryColor hover:border-[1px] transition duration-300">
+            <div className="flex-1 bg-white border-[1px] border-transparent hover:shadow-cardShadow p-4 rounded-3xl hover:border-primaryColor hover:border-[1px] transition duration-300">
               <div className="flex items-center ">
                 <img src={challenge} alt="" />
                 <p className="ml-3 text-lg font-medium">15 Challenge</p>
@@ -69,7 +70,7 @@ const Dashboard = () => {
                 Mulai Kerjakan
               </button>
             </div>
-            <div className="flex-1 bg-white border-[1px] border-transparent hover:shadow-2xl p-4 rounded-xl hover:border-primaryColor hover:border-[1px] transition duration-300">
+            <div className="flex-1 bg-white border-[1px] border-transparent hover:shadow-cardShadow p-4 rounded-3xl hover:border-primaryColor hover:border-[1px] transition duration-300">
               <div className="flex items-center ">
                 <img src={event} alt="" />
                 <p className="ml-3 text-lg font-medium">20+ Event</p>
@@ -83,19 +84,21 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/4 flex flex-col space-y-4 items-center px-3 pt-2  ">
-          <img className="w-[120px] h-[120px]" src={adam} alt="mahasiswa" />
-          <p>Adam Smith</p>
-          <p>@freakScobedo</p>
-          <p>Institut Teknologi Bandung</p>
+        <div className="w-1/4 flex flex-col items-center px-3 pt-8">
+          <img className="w-[150px] h-[150px]" src={adam} alt="mahasiswa" />
+          <p className="mt-10">Adam Smith</p>
+          <p className="mt-2">@freakScobedo</p>
+          <p className="lg:mt-4 lg:mb-4 2xl:mt-10 2xl:mb-10">
+            Institut Teknologi Bandung
+          </p>
           <div className="flex gap-2">
             <div
               style={{ backgroundColor: "#F5F6FB" }}
               className="p-2 flex flex-col rounded-lg items-center"
             >
               <img src={rank} alt="rank" />
-              <p className="py-1 font-bold text-lg">30/85</p>
-              <p className="text-center text-sm text-colorParagraph font-medium">
+              <p className="py-3 font-bold text-lg">30/85</p>
+              <p className="px-1 text-center text-sm text-colorParagraph font-medium">
                 Practice Complete
               </p>
             </div>
@@ -104,16 +107,22 @@ const Dashboard = () => {
               className="p-2 flex flex-col rounded-lg items-center"
             >
               <img src={iconChallenge} alt="rank" />
-              <p className="py-1 font-bold text-lg">10/320</p>
-              <p className="text-center text-sm text-colorParagraph font-medium">
+              <p className="py-3 font-bold text-lg">10/320</p>
+              <p className="px-1 text-center text-sm text-colorParagraph font-medium">
                 Challenge Complete
               </p>
             </div>
           </div>
-          <p style={{ color: "#F03027" }} className="text-sm font-medium ">
+          <p
+            style={{ color: "#F03027" }}
+            className="mt-10 text-sm font-medium "
+          >
             Total Score Kamu :
           </p>
-          <p style={{ color: "#F03027" }} className="text-3xl font-bold">
+          <p
+            style={{ color: "#F03027" }}
+            className="lg:mt-2 2xl:mt-2 text-3xl font-bold"
+          >
             240
           </p>
         </div>

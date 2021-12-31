@@ -1,24 +1,70 @@
 import { Link } from "react-router-dom";
 
-const breadcrumbs = () => {
+const breadcrumbs = ({ practice }) => {
   return (
-    <nav class="bg-grey-light rounded-md w-full mt-[48px]">
-      <ol class="list-reset flex items-center ">
-        <li>
-          <Link to="/dashboard" class="text-primaryColor">
-            My Dashboard
-          </Link>
-        </li>
-        <li>
-          <div className="w-[7px] h-[7px] bg-[#787889] mx-1 rounded-full" />
-        </li>
-        <li>
-          <a href="#" class="text-[#787889] hover:text-colorParagraph">
-            Practice
-          </a>
-        </li>
-      </ol>
-    </nav>
+    <>
+      {practice ? (
+        <div>
+          <nav className="bg-grey-light rounded-md w-full mt-[48px]">
+            <ol className="list-reset flex items-center ">
+              <li>
+                <Link to="/dashboard" className="text-primaryColor">
+                  My Dashboard
+                </Link>
+              </li>
+
+              <li>
+                <div className="w-[7px] h-[7px] bg-[#787889] mx-1 rounded-full" />
+              </li>
+
+              <li>
+                <Link
+                  to="/practice"
+                  className="text-[#787889] hover:text-colorParagraph"
+                >
+                  Practice
+                </Link>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      ) : (
+        <div>
+          <nav className="bg-grey-light rounded-md w-full mt-[48px]">
+            <ol className="list-reset flex items-center ">
+              <li>
+                <Link to="/dashboard" className="text-primaryColor">
+                  My Dashboard
+                </Link>
+              </li>
+
+              <li>
+                <div className="w-[7px] h-[7px] bg-[#787889] mx-1 rounded-full" />
+              </li>
+
+              <li>
+                <Link to="/practice" className="text-primaryColor">
+                  Practice
+                </Link>
+              </li>
+
+              <li>
+                <div className="w-[7px] h-[7px] bg-[#787889] mx-1 rounded-full" />
+              </li>
+
+              <li>
+                <Link
+                  to="/practicedetail"
+                  className="text-[#787889] hover:text-colorParagraph"
+                >
+                  11+ Maths Solved Past Papers
+                </Link>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      )}
+    </>
   );
 };
 

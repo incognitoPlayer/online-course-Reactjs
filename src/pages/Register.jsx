@@ -143,7 +143,7 @@ const Register = () => {
               {helper}
             </span>
             <div className="flex mt-5 lg:mt-3 items-center">
-              <Checkbox />
+              <Checkbox required />
               <p className="2xl:text-sm lg:text-xs font-medium mr-1" href="/">
                 I Accept
               </p>

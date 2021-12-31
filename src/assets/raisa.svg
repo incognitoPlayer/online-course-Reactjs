@@ -1,7 +1,7 @@
 <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0.000976562 28C0.000976562 12.536 12.537 0 28.001 0C43.465 0 56.001 12.536 56.001 28C56.001 43.464 43.465 56 28.001 56C12.537 56 0.000976562 43.464 0.000976562 28Z" fill="#EC4F3C"/>
+<path fill-rule="evenodd" clipRule="evenodd" d="M0.000976562 28C0.000976562 12.536 12.537 0 28.001 0C43.465 0 56.001 12.536 56.001 28C56.001 43.464 43.465 56 28.001 56C12.537 56 0.000976562 43.464 0.000976562 28Z" fill="#EC4F3C"/>
 <mask id="mask0_959_1497" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="57" height="56">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0.000976562 28C0.000976562 12.536 12.537 0 28.001 0C43.465 0 56.001 12.536 56.001 28C56.001 43.464 43.465 56 28.001 56C12.537 56 0.000976562 43.464 0.000976562 28Z" fill="white"/>
+<path fill-rule="evenodd" clipRule="evenodd" d="M0.000976562 28C0.000976562 12.536 12.537 0 28.001 0C43.465 0 56.001 12.536 56.001 28C56.001 43.464 43.465 56 28.001 56C12.537 56 0.000976562 43.464 0.000976562 28Z" fill="white"/>
 </mask>
 <g mask="url(#mask0_959_1497)">
 <rect x="-66.665" y="-14.667" width="192" height="116" rx="58" fill="url(#pattern0)"/>

@@ -21,38 +21,41 @@ const Navbar = ({ profile }) => {
             >
               My Dashboard
             </a>
-            <div class="px-10 group inline-block relative">
-              <a class=" py-4 text-base lg:text-sm text-colorParagraph inline-flex items-center">
+            <div className="px-10 group inline-block relative">
+              <a
+                href="/"
+                className=" py-4 text-base lg:text-sm text-colorParagraph inline-flex items-center"
+              >
                 Productivity
                 <svg
-                  class="fill-current h-3 w-3"
+                  className="fill-current h-3 w-3"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                 >
                   <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                 </svg>
               </a>
-              <ul class="absolute hidden text-colorParagraph pt-1 group-hover:block">
-                <li class="">
+              <ul className="absolute hidden text-colorParagraph pt-1 group-hover:block">
+                <li className="">
                   <a
-                    class="rounded-t lg:text-sm hover:text-[#00004A] bg-white hover:bg-[#FEF7EC] py-2 px-4 block whitespace-no-wrap"
-                    href="#"
+                    className="rounded-t lg:text-sm hover:text-[#00004A] bg-white hover:bg-[#FEF7EC] py-2 px-4 block whitespace-no-wrap"
+                    href="/"
                   >
                     Practice
                   </a>
                 </li>
-                <li class="">
+                <li className="">
                   <a
-                    class="bg-white lg:text-sm hover:text-[#00004A] hover:bg-[#FEF7EC] py-2 px-4 block whitespace-no-wrap"
-                    href="#"
+                    className="bg-white lg:text-sm hover:text-[#00004A] hover:bg-[#FEF7EC] py-2 px-4 block whitespace-no-wrap"
+                    href="/"
                   >
                     Challenge
                   </a>
                 </li>
-                <li class="">
+                <li className="">
                   <a
-                    class="rounded-b lg:text-sm hover:text-[#00004A] bg-white hover:bg-[#FEF7EC] py-2 px-4 block whitespace-no-wrap"
-                    href="#"
+                    className="rounded-b lg:text-sm hover:text-[#00004A] bg-white hover:bg-[#FEF7EC] py-2 px-4 block whitespace-no-wrap"
+                    href="/"
                   >
                     Events
                   </a>
@@ -67,10 +70,17 @@ const Navbar = ({ profile }) => {
             </a>
           </div>
           <div className="flex items-center w-1/5 justify-between">
-            <img src={mail} alt="mail" />
-            <img src={notif} alt="mail" />
-            <img src={avatar} alt="avatar" />
+            <img src={mail} className="pr-[10px]" alt="mail" />
+            <img src={notif} className="pr-[10px]" alt="mail" />
+            <img src={avatar} className="w-[35px]" alt="avatar" />
             <p>Adam Smith</p>
+            <svg
+              className="fill-current h-3 w-3"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+            </svg>
           </div>
         </>
       ) : (

@@ -1,7 +1,5 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx}",
-  ],
+  content: ["./src/**/*.{js,jsx}"],
   theme: {
     container: {
       center: true,
@@ -22,9 +20,10 @@ module.exports = {
         5: "32px",
         6: "48px",
       },
+      boxShadow: {
+        cardShadow: "8px 40px 56px rgba(6, 0, 80, 0.08)",
+      },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
-}
+  plugins: [require("@tailwindcss/forms")],
+};

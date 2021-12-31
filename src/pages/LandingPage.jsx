@@ -13,7 +13,6 @@ import petik from "../assets/petik.svg";
 import raisa from "../assets/raisa.svg";
 import alicia from "../assets/alicia.svg";
 import eliza from "../assets/eliza.svg";
-
 import Footer from "../components/Footer";
 import Newsletter from "../components/Newsletter";
 
@@ -43,10 +42,10 @@ const LandingPage = () => {
         }}
       >
         <Navbar />
-        <div className="container mx-auto flex 2xl:mt-[50px] lg:mt-[30px]">
+        <div className="container mx-auto flex 2xl:mt-[72px] lg:mt-[30px]">
           <div className="flex-1 mt-3">
             <h1
-              className="lg:text-[55px] 2xl:text-[56px] text-colorHeading font-medium text-title"
+              className="lg:text-[55px] 2xl:text-[56px] mt-3 text-colorHeading font-medium text-title"
               style={{ lineHeight: 1.2 }}
             >
               Komunitas <span className="text-tertiaryColor">Belajar</span> Bagi
@@ -59,7 +58,7 @@ const LandingPage = () => {
               kami agar anda tidak menganggur lagi.
             </p>
             <Link
-              className=" text-white bg-primaryColor inline-block lg:text-sm lg:px-8 lg:py-2 2xl:px-[40px] 2xl:py-[18px] rounded-full"
+              className="text-white bg-primaryColor inline-block lg:text-sm lg:px-8 lg:py-2 2xl:px-[40px] 2xl:py-[18px] rounded-full"
               to="/register"
             >
               Daftar Disini
@@ -128,7 +127,7 @@ const LandingPage = () => {
       </div>
 
       {/* Section 3 */}
-      <div className="flex container mx-auto">
+      <div className="flex container mx-auto mt-[100px]">
         <div className="flex-1 mt-5">
           <h2 className="text-[32px] font-semibold text-colorHeading w-3/4">
             Dalam satu platform kamu dapat mempelajari banyak hal menarik
@@ -190,7 +189,7 @@ const LandingPage = () => {
       </div>
 
       {/* Section 4 */}
-      <div className="flex container mx-auto mt-[178px] items-center ">
+      <div className="flex container mx-auto mt-[180px] items-center ">
         <div className="flex-1">
           <img src={sosmed} alt="sosmed" />
         </div>
@@ -223,11 +222,11 @@ const LandingPage = () => {
       >
         <div className="container mx-auto">
           <div className="flex pt-[100px]">
-            <h2 className="flex-1 text-[35px] text-colorHeading font-semibold">
+            <h2 className="flex-1 text-[35px] text-colorHeading font-semibold max-w-sm">
               Pendapat menarik dari Mahasiswa
             </h2>
             <div className="flex-1">
-              <p className="ml-5 w-3/4 text-base text-colorParagraph">
+              <p className="w-1/2 ml-auto text-base text-colorParagraph">
                 Ini adalah pendapat mereka sebagai mahasiswa dari seluruh
                 indonesia yang telah bergabung bersama kami menjadi pengguna
               </p>

@@ -16,7 +16,7 @@ const Practice = () => {
       <div
         style={{
           backgroundImage: `url(${bg})`,
-          backgroundSize: "contain",
+          backgroundSize: "100vw",
           backgroundRepeat: "no-repeat",
         }}
         className="h-[486px]"
@@ -25,8 +25,8 @@ const Practice = () => {
           <Navbar profile />
         </div>
         <div className="container mx-auto">
-          <Breadcrumbs />
-          <h2 className="mt-[40px] text-[40px] font-semibold w-2/5 text-colorHeading">
+          <Breadcrumbs practice />
+          <h2 className="mt-[40px] text-[40px] font-semibold max-w-md text-colorHeading">
             Dapatkan <span className="text-primaryColor">Ilmu</span> Baru Hari
             ini! <span className="font-normal">🔥</span>
           </h2>
@@ -38,17 +38,17 @@ const Practice = () => {
         </div>
       </div>
 
-      <div className="container mx-auto mt-4">
+      <div className="container mx-auto mt-[56px]">
         {/* Section 2 */}
         <div className="flex ">
           <h3 className="flex-1 text-[28px] font-semibold text-colorHeading">
-            Problem Solving Practice
+            All Practice
           </h3>
           <div className="flex flex-1 gap-4">
             <div className="flex flex-1 items-center h-[50px] bg-[#F5F6FB] text-[#54586F] rounded-full ">
               <img src={search} alt="search" className="w-5 h-5 ml-3" />
               <input
-                className="rounded-full h-full focus:outline-none focus:border-none w-full outline-none border-none bg-[#F5F6FB] text-[#54586F] focus:ring-0"
+                className="rounded-full h-full focus:outline-none focus:border w-full outline-none border-none bg-[#F5F6FB] text-[#54586F] focus:ring-0"
                 type="text"
                 placeholder="Search any Practice ..."
               />
@@ -57,7 +57,7 @@ const Practice = () => {
           </div>
         </div>
         {/* Section 3 */}
-        <ul className="flex items-center justify-between mt-[45px]">
+        <ul className="flex items-center justify-between mt-[56px]">
           <li>
             <a
               className="hover:text-primaryColor text-[#54586F] transition ease-in-out duration-500"
@@ -123,7 +123,7 @@ const Practice = () => {
             .map((_, index) => (
               <div
                 key={index}
-                className="flex-1 bg-white border-[1px] border-[#DFDFDF] hover:shadow-2xl p-4 rounded-xl hover:border-primaryColor hover:border-[1px] transition duration-300 relative"
+                className="flex-1 bg-white border-[1px] border-[#DFDFDF] hover:shadow-cardShadow p-4 rounded-3xl hover:border-primaryColor hover:border-[1px] transition duration-300 relative"
               >
                 <div className="flex items-center ">
                   <img src={practice} alt="" />
@@ -133,11 +133,11 @@ const Practice = () => {
                   141 solved 11+ Maths Past Papers with detailed Answers and
                   downloadable PDF Question Papers.
                 </p>
-                <button className="bg-white flex justify-between underline transition duration-500   text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
+                <button className="bg-white flex justify-between underline transition duration-500 text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
                   Kerjakan Practice
                   <img src={right} alt="right" />
                 </button>
-                <span className="absolute -top-3 -right-3 px-3 font-medium py-1 bg-[#FFCCCC] text-[#F03027] rounded-md">
+                <span className="absolute -top-3 -right-3 px-3 font-medium py-1 bg-[#FFCCCC] text-[#F03027] rounded-lg">
                   New
                 </span>
               </div>
@@ -147,7 +147,7 @@ const Practice = () => {
             .map((_, index) => (
               <div
                 key={index}
-                className="flex-1 bg-white border-[1px] border-[#DFDFDF] hover:shadow-2xl p-4 rounded-xl hover:border-primaryColor hover:border-[1px] transition duration-300 relative"
+                className="flex-1 bg-white border-[1px] border-[#DFDFDF] hover:shadow-cardShadow p-4 rounded-3xl hover:border-primaryColor hover:border-[1px] transition duration-300 relative"
               >
                 <div className="flex items-center ">
                   <img src={practice} alt="" />
@@ -157,7 +157,7 @@ const Practice = () => {
                   141 solved 11+ Maths Past Papers with detailed Answers and
                   downloadable PDF Question Papers.
                 </p>
-                <button className="bg-white flex justify-between underline transition duration-500   text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
+                <button className="bg-white flex justify-between underline transition duration-500 text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
                   Kerjakan Practice
                   <img src={right} alt="right" />
                 </button>
@@ -168,7 +168,28 @@ const Practice = () => {
             .map((_, index) => (
               <div
                 key={index}
-                className="flex-1 bg-white border-[1px] border-[#DFDFDF] hover:shadow-2xl p-4 rounded-xl hover:border-primaryColor hover:border-[1px] transition duration-300 relative"
+                className="flex-1 bg-white border-[1px] border-[#DFDFDF] hover:shadow-cardShadow p-4 rounded-3xl hover:border-primaryColor hover:border-[1px] transition duration-300 relative"
+              >
+                <div className="flex items-center ">
+                  <img src={practice} alt="" />
+                  <p className="ml-3 text-lg font-medium">15 Challenge</p>
+                </div>
+                <p className="text-base mt-[20px] text-colorParagraph">
+                  141 solved 11+ Maths Past Papers with detailed Answers and
+                  downloadable PDF Question Papers.
+                </p>
+                <button className="bg-white flex justify-between underline transition duration-500 text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
+                  Kerjakan Practice
+                  <img src={right} alt="right" />
+                </button>
+              </div>
+            ))}
+          {Array(4)
+            .fill()
+            .map((_, index) => (
+              <div
+                key={index}
+                className="flex-1 bg-white border-[1px] border-[#DFDFDF] hover:shadow-cardShadow p-4 rounded-3xl hover:border-primaryColor hover:border-[1px] transition duration-300 relative"
               >
                 <div className="flex items-center ">
                   <img src={practice} alt="" />
@@ -182,7 +203,7 @@ const Practice = () => {
                   Kerjakan Practice
                   <img src={right} alt="right" />
                 </button>
-                <span className="absolute -top-3 -right-3 px-3 font-medium py-1 bg-[#E1FFC2] text-[#588926] rounded-md">
+                <span className="absolute -top-3 -right-3 px-3 font-medium py-1 bg-[#E1FFC2] text-[#588926] rounded-lg">
                   Done
                 </span>
               </div>
@@ -190,60 +211,60 @@ const Practice = () => {
         </div>
 
         {/* Section 5 */}
-        <div class="flex justify-center mt-[64px] mb-[100px]">
+        <div className="flex justify-center mt-[64px] mb-[100px]">
           <nav aria-label="Page navigation example">
-            <ul class="flex list-style-none">
-              <li class="page-item bg-[#F5F6FB] rounded-full">
+            <ul className="flex list-style-none">
+              <li className="page-item bg-[#F5F6FB] rounded-full">
                 <a
-                  class="page-link  relative block py-1.5 px-1.5 rounded-sm border-0 bg-transparent outline-none transition-all duration-300 text-gray-800 hover:text-gray-800 focus:shadow-none"
+                  className="page-link relative block py-1.5 px-1.5 rounded-sm border-0 bg-transparent outline-none transition-all duration-300 text-gray-800 hover:text-gray-800 focus:shadow-none"
                   href="#"
                 >
                   <img src={left} alt="left" />
                 </a>
               </li>
-              <li class="page-item">
+              <li className="page-item">
                 <a
-                  class="page-link relative block py-1.5 px-3 border-0 bg-transparent outline-none transition-all duration-300 rounded-sm text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
+                  className="page-link relative block py-1.5 px-3 border-0 bg-transparent outline-none transition-all duration-300 rounded-full text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
                   href="#"
                 >
                   1
                 </a>
               </li>
-              <li class="page-item">
+              <li className="page-item">
                 <a
-                  class="page-link relative block py-1.5 px-3 border-0 bg-transparent outline-none transition-all duration-300 rounded-sm text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
+                  className="page-link relative block py-1.5 px-3 border-0 bg-transparent outline-none transition-all duration-300 rounded-full text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
                   href="#"
                 >
                   2
                 </a>
               </li>
-              <li class="page-item">
+              <li className="page-item">
                 <a
-                  class="page-link relative block py-1.5 px-3  border-0 bg-transparent outline-none transition-all duration-300 rounded-sm text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
+                  className="page-link relative block py-1.5 px-3  border-0 bg-transparent outline-none transition-all duration-300 rounded-full text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
                   href="#"
                 >
                   3
                 </a>
               </li>
-              <li class="page-item">
+              <li className="page-item">
                 <a
-                  class="page-link relative block py-1.5 px-3  border-0 bg-transparent outline-none transition-all duration-300 rounded-sm text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
+                  className="page-link relative block py-1.5 px-3  border-0 bg-transparent outline-none transition-all duration-300 rounded-full text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
                   href="#"
                 >
                   ...
                 </a>
               </li>
-              <li class="page-item">
+              <li className="page-item">
                 <a
-                  class="page-link relative block py-1.5 px-3  border-0 bg-transparent outline-none transition-all duration-300 rounded-sm text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
+                  className="page-link relative block py-1.5 px-3  border-0 bg-transparent outline-none transition-all duration-300 rounded-full text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
                   href="#"
                 >
                   52
                 </a>
               </li>
-              <li class="page-item bg-primaryColor  text-white rounded-full">
+              <li className="page-item bg-primaryColor  text-white rounded-full">
                 <a
-                  class="page-link relative block py-1.5 px-1.5 border-0 bg-transparent outline-none transition-all duration-300 rounded-sm text-white  focus:shadow-none"
+                  className="page-link relative block py-1.5 px-1.5 border-0 bg-transparent outline-none transition-all duration-300 rounded-full text-white  focus:shadow-none"
                   href="#"
                 >
                   <img className="" src={rightt} alt="right" />

@@ -8,6 +8,7 @@ import VerifyForgotPassword from "../pages/VerifyForgotPassword";
 import VerifyRegister from "../pages/VerifyRegister";
 import ResetPassword from "../pages/ResetPassword";
 import Practice from "../pages/Practice";
+import PracticeDetail from "../pages/PracticeDetail";
 
 const RouterPages = () => {
   return (
@@ -26,6 +27,7 @@ const RouterPages = () => {
           <Route path="/verifyregister" element={<VerifyRegister />} />
           <Route path="/resetpassword" element={<ResetPassword />} />
           <Route path="/practice" element={<Practice />} />
+          <Route path="/practicedetail" element={<PracticeDetail />} />
         </Routes>
       </Router>
     </>
