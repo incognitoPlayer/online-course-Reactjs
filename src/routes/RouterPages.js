@@ -9,6 +9,8 @@ import VerifyRegister from "../pages/VerifyRegister";
 import ResetPassword from "../pages/ResetPassword";
 import Practice from "../pages/Practice";
 import PracticeDetail from "../pages/PracticeDetail";
+import Events from "../pages/Events";
+import EventsDetail from "../pages/EventsDetail";
 
 const RouterPages = () => {
   return (
@@ -28,6 +30,8 @@ const RouterPages = () => {
           <Route path="/resetpassword" element={<ResetPassword />} />
           <Route path="/practice" element={<Practice />} />
           <Route path="/practicedetail" element={<PracticeDetail />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/events/detail" element={<EventsDetail />} />
         </Routes>
       </Router>
     </>

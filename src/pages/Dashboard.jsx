@@ -85,10 +85,14 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="w-1/4 flex flex-col items-center px-3 pt-8">
-          <img className="w-[150px] h-[150px]" src={adam} alt="mahasiswa" />
-          <p className="mt-10">Adam Smith</p>
+          <img
+            className="w-[150px] h-[150px] lg:w-[120px] lg:h-[120px]"
+            src={adam}
+            alt="mahasiswa"
+          />
+          <p className="lg:mt-2 mt-10">Adam Smith</p>
           <p className="mt-2">@freakScobedo</p>
-          <p className="lg:mt-4 lg:mb-4 2xl:mt-10 2xl:mb-10">
+          <p className="lg:mt-2 lg:mb-4 2xl:mt-10 2xl:mb-10">
             Institut Teknologi Bandung
           </p>
           <div className="flex gap-2">
