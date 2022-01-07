@@ -29,7 +29,7 @@ const RouterPages = () => {
           <Route path="/verifyregister" element={<VerifyRegister />} />
           <Route path="/resetpassword" element={<ResetPassword />} />
           <Route path="/practice" element={<Practice />} />
-          <Route path="/practicedetail" element={<PracticeDetail />} />
+          <Route path="/practice/detail" element={<PracticeDetail />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/detail" element={<EventsDetail />} />
         </Routes>

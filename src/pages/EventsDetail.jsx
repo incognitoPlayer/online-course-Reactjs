@@ -15,8 +15,6 @@ import edit from "../assets/edit.svg";
 import maill from "../assets/maill.svg";
 import calendar from "../assets/calendar.svg";
 import done from "../assets/done.svg";
-import love from "../assets/love.svg";
-import loves from "../assets/loves.svg";
 import Navbar from "../components/Navbar";
 import { Tab } from "@headlessui/react";
 
