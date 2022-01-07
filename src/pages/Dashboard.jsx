@@ -7,9 +7,27 @@ import rank from "../assets/rank.svg";
 import iconChallenge from "../assets/iconChallenge.svg";
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Dashboard = () => {
   const navigate = useNavigate();
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const res = await axios.get(
+          "https://tokoh-muda-indonesia.herokuapp.com/dashboard/1"
+        );
+        setUser(res.data);
+        console.log(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getUser();
+  }, []);
   return (
     <div className="bg-no-repeat bg-center h-screen">
       <Navbar profile />
@@ -35,7 +53,7 @@ const Dashboard = () => {
             className="lg:text-[30px] 2xl:text-[40px] text-primaryColor mt-2 mb-4 font-medium text-title"
             style={{ lineHeight: 1.2 }}
           >
-            Adam Smith 👋
+            {user && user[0]?.nama_lengkap.String} 👋
           </h1>
 
           <p className="2xl:mb-10 lg:mb-4 lg:mt-2 text-lg lg:text-[16px] 2xl:text-base text-colorParagraph ">
@@ -78,7 +96,10 @@ const Dashboard = () => {
               <p className="text-base mt-[20px] text-colorParagraph">
                 Tersedia 20 lebih Event yang bisa kamu kerjakan sekarang
               </p>
-              <button className="bg-white transition duration-500 hover:bg-[#f05d27] hover:text-white text-primaryColor border-primaryColor border-[1px] py-2 px-4 rounded-full w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
+              <button
+                className="bg-white transition duration-500 hover:bg-[#f05d27] hover:text-white text-primaryColor border-primaryColor border-[1px] py-2 px-4 rounded-full w-full 2xl:text-base lg:text-sm font-medium mt-[32px]"
+                onClick={() => navigate("/events")}
+              >
                 Ikuti Event
               </button>
             </div>
@@ -90,10 +111,12 @@ const Dashboard = () => {
             src={adam}
             alt="mahasiswa"
           />
-          <p className="lg:mt-2 mt-10">Adam Smith</p>
-          <p className="mt-2">@freakScobedo</p>
+          <p className="lg:mt-2 mt-10">
+            {user && user[0]?.nama_lengkap.String}
+          </p>
+          <p className="mt-2">{user && user[0]?.username.String}</p>
           <p className="lg:mt-2 lg:mb-4 2xl:mt-10 2xl:mb-10">
-            Institut Teknologi Bandung
+            {user && user[0]?.university.String}
           </p>
           <div className="flex gap-2">
             <div
@@ -101,7 +124,10 @@ const Dashboard = () => {
               className="p-2 flex flex-col rounded-lg items-center"
             >
               <img src={rank} alt="rank" />
-              <p className="py-3 font-bold text-lg">30/85</p>
+              <p className="py-3 font-bold text-lg">
+                {user && user[0]?.finished_practice}/
+                {user && user[0]?.jumlah_practice}
+              </p>
               <p className="px-1 text-center text-sm text-colorParagraph font-medium">
                 Practice Complete
               </p>
@@ -111,7 +137,10 @@ const Dashboard = () => {
               className="p-2 flex flex-col rounded-lg items-center"
             >
               <img src={iconChallenge} alt="rank" />
-              <p className="py-3 font-bold text-lg">10/320</p>
+              <p className="py-3 font-bold text-lg">
+                {user && user[0]?.finished_challange}/
+                {user && user[0]?.jumlah_challange}
+              </p>
               <p className="px-1 text-center text-sm text-colorParagraph font-medium">
                 Challenge Complete
               </p>

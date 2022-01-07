@@ -15,15 +15,15 @@ const Navbar = ({ profile }) => {
       {profile ? (
         <>
           <div className="flex justify-center items-center ">
-            <a
+            <Link
               className="px-10 py-4 text-base lg:text-sm font-medium text-colorHeading"
-              href="/"
+              to="/dashboard"
             >
               My Dashboard
-            </a>
+            </Link>
             <div className="px-10 group inline-block relative">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className=" py-4 text-base lg:text-sm text-colorParagraph inline-flex items-center"
               >
                 Productivity
@@ -34,31 +34,31 @@ const Navbar = ({ profile }) => {
                 >
                   <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                 </svg>
-              </a>
+              </Link>
               <ul className="absolute hidden text-colorParagraph pt-1 group-hover:block">
                 <li className="">
-                  <a
+                  <Link
                     className="rounded-t lg:text-sm hover:text-[#00004A] bg-white hover:bg-[#FEF7EC] py-2 px-4 block whitespace-no-wrap"
-                    href="/"
+                    to="/practice"
                   >
                     Practice
-                  </a>
+                  </Link>
                 </li>
                 <li className="">
-                  <a
+                  <Link
                     className="bg-white lg:text-sm hover:text-[#00004A] hover:bg-[#FEF7EC] py-2 px-4 block whitespace-no-wrap"
-                    href="/"
+                    to="/"
                   >
                     Challenge
-                  </a>
+                  </Link>
                 </li>
                 <li className="">
-                  <a
+                  <Link
                     className="rounded-b lg:text-sm hover:text-[#00004A] bg-white hover:bg-[#FEF7EC] py-2 px-4 block whitespace-no-wrap"
-                    href="/"
+                    to="/events"
                   >
                     Events
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

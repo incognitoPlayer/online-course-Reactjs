@@ -90,7 +90,7 @@ const Events = () => {
                   </div>
                   <button
                     className="bg-white transition duration-500 hover:bg-[#f05d27] hover:text-white text-primaryColor border-primaryColor border-[1px] py-2 px-4 rounded-full w-full 2xl:text-base lg:text-sm font-medium mt-[32px]"
-                    onClick={() => navigate("/events/detail")}
+                    onClick={() => navigate("/eventsdetail")}
                   >
                     Lihat Event
                   </button>
@@ -142,7 +142,7 @@ const Events = () => {
                   </div>
                   <button
                     className="bg-white transition duration-500 hover:bg-[#f05d27] hover:text-white text-primaryColor border-primaryColor border-[1px] py-2 px-4 rounded-full w-full 2xl:text-base lg:text-sm font-medium mt-[32px]"
-                    onClick={() => navigate("/events/detail")}
+                    onClick={() => navigate("/eventsdetail")}
                   >
                     Lihat Event
                   </button>
@@ -191,7 +191,7 @@ const Events = () => {
                   </div>
                   <button
                     className="bg-white transition duration-500 hover:bg-[#f05d27] hover:text-white text-primaryColor border-primaryColor border-[1px] py-2 px-4 rounded-full w-full 2xl:text-base lg:text-sm font-medium mt-[32px]"
-                    onClick={() => navigate("/events/detail")}
+                    onClick={() => navigate("/eventsdetail")}
                   >
                     Lihat Event
                   </button>
