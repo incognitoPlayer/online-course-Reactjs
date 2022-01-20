@@ -41,8 +41,8 @@ const Events = () => {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="flex justify-between items-center ">
-          <h3 className=" text-[28px] font-semibold text-colorHeading">
+        <div className="flex justify-between items-end">
+          <h3 className=" text-[28px] font-semibold text-colorHeading mt-6">
             All Events
           </h3>
           <Dropdown />
@@ -90,7 +90,7 @@ const Events = () => {
                   </div>
                   <button
                     className="bg-white transition duration-500 hover:bg-[#f05d27] hover:text-white text-primaryColor border-primaryColor border-[1px] py-2 px-4 rounded-full w-full 2xl:text-base lg:text-sm font-medium mt-[32px]"
-                    onClick={() => navigate("/eventsdetail")}
+                    onClick={() => navigate("/events/detail")}
                   >
                     Lihat Event
                   </button>
@@ -142,7 +142,7 @@ const Events = () => {
                   </div>
                   <button
                     className="bg-white transition duration-500 hover:bg-[#f05d27] hover:text-white text-primaryColor border-primaryColor border-[1px] py-2 px-4 rounded-full w-full 2xl:text-base lg:text-sm font-medium mt-[32px]"
-                    onClick={() => navigate("/eventsdetail")}
+                    onClick={() => navigate("/events/detail")}
                   >
                     Lihat Event
                   </button>
@@ -191,7 +191,7 @@ const Events = () => {
                   </div>
                   <button
                     className="bg-white transition duration-500 hover:bg-[#f05d27] hover:text-white text-primaryColor border-primaryColor border-[1px] py-2 px-4 rounded-full w-full 2xl:text-base lg:text-sm font-medium mt-[32px]"
-                    onClick={() => navigate("/eventsdetail")}
+                    onClick={() => navigate("/events/detail")}
                   >
                     Lihat Event
                   </button>

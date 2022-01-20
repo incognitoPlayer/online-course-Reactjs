@@ -31,7 +31,7 @@ const RouterPages = () => {
           <Route path="/practice" element={<Practice />} />
           <Route path="/practice/detail" element={<PracticeDetail />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/eventsdetail" element={<EventsDetail />} />
+          <Route path="/events/detail" element={<EventsDetail />} />
         </Routes>
       </Router>
     </>

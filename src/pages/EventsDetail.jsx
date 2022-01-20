@@ -17,6 +17,8 @@ import calendar from "../assets/calendar.svg";
 import done from "../assets/done.svg";
 import Navbar from "../components/Navbar";
 import { Tab } from "@headlessui/react";
+import Footer from "../components/Footer";
+import Newsletter from "../components/Newsletter";
 
 const EventsDetail = () => {
   return (
@@ -24,29 +26,29 @@ const EventsDetail = () => {
       <div className="bg-white">
         <Navbar profile />
       </div>
-      <img src={lead2} alt="lead" className="h-[300px] w-full" />
+      <img src={lead2} alt="lead" className="h-[400px] w-full" />
       <div className="container mx-auto">
         {/* section 1 */}
         <div className="relative">
-          <div className="bg-white items-start flex p-3 rounded-lg shadow-cardShadow -top-5 absolute w-full">
-            <img src={event3} alt="event" />
+          <div className="bg-white items-start flex p-3 rounded-3xl shadow-cardShadow -top-5 absolute w-full">
+            <img src={event3} className="w-[120px] m-2" alt="event" />
             <div className="ml-5 w-full">
-              <h2 className="text-4xl text-colorHeading">
+              <h2 className="text-[32px] max-w-5xl text-colorHeading">
                 Menjadi Pemimpin yang Mampu Membuat Perubahan Terhadap Negeri
               </h2>
               <p className="text-primaryColor text-base mt-3">
                 Minimal poin 500
               </p>
-              <div className="flex justify-between mt-3">
+              <div className="flex justify-between mt-3 mb-3">
                 <div className="flex items-center">
                   <img src={date} alt="date" />
-                  <span className="text-xs ml-1 font-medium text-[#54586F]">
+                  <span className="text-sm ml-1 font-medium text-[#54586F]">
                     1 Januari 2022, 13:00 WIB - 1 Januari 2022, 16:00 WIB
                   </span>
                 </div>
                 <div className="flex items-center">
                   <img src={people} alt="people" />
-                  <span className="text-xs ml-1 font-medium text-[#54586F]">
+                  <span className="text-sm ml-1 font-medium text-[#54586F]">
                     500 orang yang mengikuti
                   </span>
                 </div>
@@ -75,7 +77,7 @@ const EventsDetail = () => {
         </div>
 
         {/* section 2 */}
-        <div className="flex pt-[230px]">
+        <div className="flex pt-[250px]">
           <div className="w-3/5">
             <Tab.Group>
               <Tab.List>
@@ -109,10 +111,10 @@ const EventsDetail = () => {
               </Tab.List>
               <Tab.Panels className="w-11/12">
                 <Tab.Panel>
-                  <h3 className="text-colorHeading text-3xl mt-4">
+                  <h3 className="text-colorHeading text-2xl mt-4">
                     Deskripsi Practice
                   </h3>
-                  <p className="mt-3 text-sm">
+                  <p className="mt-3 text-sm leading-6">
                     Tidak mudah untuk menjadi seorang pemimpin. Ada banyak hal
                     yang harus direncanakan, maupun diterapkan agar seseorang
                     layak untuk dianggap sebagai seorang pemimpin. Salah satu
@@ -125,17 +127,17 @@ const EventsDetail = () => {
                     organisasi, menerapkan prinsip yang diajarkan dalam Course,
                     serta membangun engagement tim yang baik
                   </p>
-                  <h3 className="text-colorHeading text-3xl mt-4">
+                  <h3 className="text-colorHeading text-2xl mt-4">
                     Kenapa kita harus ikut event ini?
                   </h3>
-                  <p className="mt-3 text-sm">
+                  <p className="mt-3 text-sm  leading-6">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Quis ipsum suspendisse ultrices gravida. Risus
                     commodo viverra maecenas accumsan lacus vel facilisis
                     consectetur adipiscing elit.
                   </p>
-                  <h3 className="text-colorHeading text-3xl mt-4">
+                  <h3 className="text-colorHeading text-2xl mt-4">
                     Apa yang kamu pelajari dari event ini?
                   </h3>
                   <ul className="mt-3 text-sm list-disc list-inside marker:text-primaryColor">
@@ -245,7 +247,7 @@ const EventsDetail = () => {
               <button className="bg-primaryColor text-white  border-primaryColor  py-2 px-4 rounded-full w-full 2xl:text-base lg:text-sm font-medium mt-[24px]">
                 Register Event
               </button>
-              <div className="h-[2px] bg-[#dfdfdf] mt-4"></div>
+              <div className="h-[1px] bg-[#dfdfdf] mt-4"></div>
               <p className="text-center text-sm mt-2 font-medium">
                 Registrasi berakhir dalam
               </p>
@@ -255,7 +257,7 @@ const EventsDetail = () => {
             {/* tags */}
             <div className="bg-white border-[1px] mt-4 rounded-md border-[#DFDFDF] ">
               <h3 className="text-base font-medium py-1 px-4">Tags</h3>
-              <div className="h-[2px] bg-[#dfdfdf]"></div>
+              <div className="h-[1px] bg-[#dfdfdf]"></div>
               <div className="flex items-center justify-around mt-4 mb-4">
                 <div className="bg-[#FFECD7] px-2 py-0.5 rounded-lg">
                   <a className="text-xs font-medium text-[#DC7300] " href="/">
@@ -280,7 +282,7 @@ const EventsDetail = () => {
               <h3 className="text-base font-medium py-1 px-4">
                 Share Event Ini
               </h3>
-              <div className="h-[2px] bg-[#dfdfdf]"></div>
+              <div className="h-[1px] bg-[#dfdfdf]"></div>
               <div className="flex items-center justify-around mt-4 mb-4">
                 <div className="bg-[#F5F6FB] hover:bg-[#dee3fc] rounded-full">
                   <a className="text-lg font-medium " href="/">
@@ -308,20 +310,20 @@ const EventsDetail = () => {
         </div>
 
         {/* comments */}
-        <div className="mt-5">
+        <div className="mt-[64px]">
           <h3 className="text-xl">Comment</h3>
           <div className="flex p-2">
             <img src={avatar} alt="avatar" />
             <input
               type="text"
-              className="border-b-[1px] border-r-0 border-l-0 border-t-0 w-full ml-3 text-sm border-[#7E7E7E] focus:border-primaryColor focus:ring-0"
+              className="border-b-[1px] border-r-0 border-l-0 border-t-0 w-full ml-3 text-sm border-[#DFDFDF] focus:border-primaryColor focus:ring-0"
               placeholder="Tambahkan komentar anda"
             />
           </div>
           <div className="flex p-3 mt-6 border-b-[1px] items-start border-[#DFDFDF]">
             <img src={avatar} alt="avatar" />
             <div className="ml-3">
-              <p className="text-colorHeading text-sm">Tony Stark</p>
+              <p className="text-colorHeading text-base">Tony Stark</p>
               <span className="text-xs">5 Jam lalu</span>
               <p className="mt-3 text-sm">
                 Alus pisan euy eventna hayang deui ngiluan mun aya mah,
@@ -354,7 +356,7 @@ const EventsDetail = () => {
           <div className="flex p-3 mt-6 border-b-[1px] items-start border-[#DFDFDF]">
             <img src={eliza} alt="avatar" />
             <div className="ml-3">
-              <p className="text-colorHeading text-sm">Captain America</p>
+              <p className="text-colorHeading text-base">Captain America</p>
               <span className="text-xs">5 Jam lalu</span>
               <p className="mt-3 text-sm">
                 Alus pisan euy eventna hayang deui ngiluan mun aya mah,
@@ -386,9 +388,9 @@ const EventsDetail = () => {
           <div className="flex p-3 mt-6 border-b-[1px] items-start border-[#DFDFDF]">
             <img src={raisa} alt="avatar" />
             <div className="ml-3">
-              <p className="text-colorHeading text-sm">Lili Kitty</p>
+              <p className="text-colorHeading text-base">Lili Kitty</p>
               <span className="text-xs">5 Jam lalu</span>
-              <p className="mt-3 text-sm">
+              <p className="mt-3 text-sm mb-[150px]">
                 Urang karek ngiluan euy acara nu kie, mantep euy. tibaheula
                 neangan event siga kieu tapi hese. materina alus gampang nerep
                 jeung bisa di praktekeun langsung. semoga event di lobakeun siga
@@ -418,6 +420,10 @@ const EventsDetail = () => {
           </div>
         </div>
       </div>
+
+      {/* Section 3 */}
+      <Newsletter />
+      <Footer />
     </div>
   );
 };
