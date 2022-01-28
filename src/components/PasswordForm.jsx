@@ -3,7 +3,7 @@ import iconEyeClose from "../assets/eye-close.svg";
 
 const PasswordForm = (props) => {
   return (
-    <>
+    <div>
       <label
         className="block text-colorHeading 2xl:text-sm lg:text-xs font-medium mb-2"
         htmlFor="password"
@@ -28,7 +28,7 @@ const PasswordForm = (props) => {
           alt=""
         />
       </div>
-    </>
+    </div>
   );
 };
 

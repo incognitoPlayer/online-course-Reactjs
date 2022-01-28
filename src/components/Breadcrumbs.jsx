@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-const breadcrumbs = ({ practice }) => {
+const breadcrumbs = ({ practice, link, link1, link2, url }) => {
   return (
     <>
       {practice ? (
         <div>
-          <nav className="bg-grey-light rounded-md w-full mt-[48px]">
+          <nav className="bg-grey-light rounded-md w-full pt-[48px]">
             <ol className="list-reset flex items-center ">
               <li>
                 <Link to="/dashboard" className="text-primaryColor">
@@ -19,10 +19,10 @@ const breadcrumbs = ({ practice }) => {
 
               <li>
                 <Link
-                  to="/practice"
+                  to="#"
                   className="text-[#787889] hover:text-colorParagraph"
                 >
-                  Practice
+                  {link}
                 </Link>
               </li>
             </ol>
@@ -43,8 +43,8 @@ const breadcrumbs = ({ practice }) => {
               </li>
 
               <li>
-                <Link to="/practice" className="text-primaryColor">
-                  Practice
+                <Link to={`/${url}`} className="text-primaryColor">
+                  {link1}
                 </Link>
               </li>
 
@@ -57,7 +57,7 @@ const breadcrumbs = ({ practice }) => {
                   to="/practicedetail"
                   className="text-[#787889] hover:text-colorParagraph"
                 >
-                  11+ Maths Solved Past Papers
+                  {link2}
                 </Link>
               </li>
             </ol>

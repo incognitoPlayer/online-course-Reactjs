@@ -14,11 +14,11 @@ import linkedin from "../assets/linkedin.svg";
 import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
 
-const PracticeDetail = () => {
+const ChallengeDetail = () => {
   return (
     <>
       <div className="bg-[#F5F6FB]">
-        <div className="bg-[#FBE5FF] h-[486px]">
+        <div className="bg-[#D1F1FF] h-[486px]">
           <div className="bg-white">
             <Navbar profile />
           </div>
@@ -29,33 +29,28 @@ const PracticeDetail = () => {
           />
           <div className="container mx-auto">
             <Breadcrumbs
-              link1="Practice"
-              link2="11+ Maths
-Solved Past Papers"
-              url="practice"
+              link1="Challenge"
+              link2="Ketidakmerataan Akses dan Fasilitas Pendidikan"
+              url="challenge"
             />
             <div className="flex pt-[40px]">
               <div className="flex-1">
                 <h2 className="text-[35px] font-semibold text-colorHeading">
-                  11+ Maths Solved Past Papers
+                  Ketidakmerataan Akses dan Fasilitas Pendidikan
                 </h2>
-                <p className="text-[15px] mt-4 w-3/4 text-colorParagraph">
-                  141 solved 11+ Maths Past Papers with detailed Answers and
-                  downloadable PDF Question Papers.
-                </p>
               </div>
               <div className="flex-1 grid gap-4 grid-cols-2">
                 <div>
                   <div className="flex">
                     <img src={icon1} />
                     <span className="ml-3 text-[15px]">
-                      5 Point total yang di dapat
+                      300 Point total yang di dapat
                     </span>
                   </div>
                   <div className="flex mt-[64px]">
                     <img src={icon2} />
                     <span className="ml-3 text-[15px]">
-                      Problem Solving Practice
+                      Challenge Pulau Pendidikan
                     </span>
                   </div>
                 </div>
@@ -88,7 +83,7 @@ Solved Past Papers"
                   src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                 ></iframe>
                 <span className="text-[22px] font-medium text-colorHeading">
-                  Math Solved Past Papers - Introduction | Episode 1
+                  Ketidakmerataan Akses dan Fasilitas Pendidikan
                 </span>
               </div>
               <div className="w-[30%] ml-4">
@@ -248,7 +243,7 @@ Solved Past Papers"
                       : "w-1/5 pb-2 border-b-1"
                   }
                 >
-                  Overview Practice
+                  Overview Challenge
                 </Tab>
                 <Tab
                   className={({ selected }) =>
@@ -257,7 +252,16 @@ Solved Past Papers"
                       : "w-1/5 pb-2 border-b-1"
                   }
                 >
-                  Kerjakan Practice
+                  Challenge Guide
+                </Tab>
+                <Tab
+                  className={({ selected }) =>
+                    selected
+                      ? "text-primaryColor pb-2 w-1/5 border-b-2 border-primaryColor"
+                      : "w-1/5 pb-2 border-b-1"
+                  }
+                >
+                  Kerjakan Challenge
                 </Tab>
                 <Tab
                   className={({ selected }) =>
@@ -271,8 +275,18 @@ Solved Past Papers"
               </Tab.List>
               <Tab.Panels>
                 <Tab.Panel className="mt-[48px]">
+                  <h3 className="text-colorHeading text-2xl mt-[56px]">
+                    Kategori Masalah
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 max-w-5xl">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                    commodo viverra maecenas accumsan lacus vel facilisis
+                    consectetur adipiscing elit.
+                  </p>
                   <h3 className="text-colorHeading text-2xl mt-4">
-                    Deskripsi Practice
+                    Latar Belakang Masalah
                   </h3>
                   <p className="mt-3 text-sm leading-6 max-w-5xl">
                     Suppose you had a bunch of DVDs at home that you wanted to
@@ -307,40 +321,10 @@ Solved Past Papers"
                     move over to the world of computers and port this example to
                     programming.
                   </p>
-                  <h3 className="text-colorHeading text-2xl mt-[56px]">
-                    Kenapa kita harus ikut event ini?
-                  </h3>
-                  <p className="mt-3 text-sm leading-6 max-w-5xl">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                    commodo viverra maecenas accumsan lacus vel facilisis
-                    consectetur adipiscing elit.
-                  </p>
-                  <h3 className="text-colorHeading text-2xl mt-[56px]">
-                    Apa yang kamu pelajari dari event ini?
-                  </h3>
-                  <ul className="mt-3 text-sm list-disc list-inside marker:text-primaryColor leading-6 max-w-5xl">
-                    <li className="p-1">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    </li>
-                    <li className="p-1">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    </li>
-                    <li className="p-1">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    </li>
-                    <li className="p-1">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    </li>
-                    <li className="p-1">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    </li>
-                  </ul>
                 </Tab.Panel>
                 <Tab.Panel className="mt-[48px]">
                   <h3 className="text-colorHeading text-2xl mt-4">
-                    Petunjuk Mengerjakan Task
+                    Petunjuk Task
                   </h3>
                   <p className="mt-3 text-sm leading-6 max-w-5xl">
                     You might not actually name the DVD box, but when you want
@@ -351,98 +335,47 @@ Solved Past Papers"
                     move over to the world of computers and port this example to
                     programming:
                     <ul className="mt-3 text-sm list-disc list-inside marker:text-gray-300 leading-6 max-w-5xl">
-                      <li className="p-1">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                      <li className="mt-4 marker:text-gray-300">
+                        All the DVDs would be inside a plastic cover.
                       </li>
-                      <li className="p-1">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                      <li className="marker:text-gray-300">
+                        The cover would have the name of the movie, the cast,
+                        and all sorts of other details.
                       </li>
-                      <li className="p-1">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                      </li>
-                      <li className="p-1">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                      </li>
-                      <li className="p-1">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                      <li className="mb-4 marker:text-gray-300">
+                        All the covers would be of exactly the same size and
+                        would contain just one, and only one, DVD.
                       </li>
                     </ul>
                   </p>
-                  <h3 className="text-colorHeading text-2xl mt-[56px] mb-3">
-                    Essay Practice
+                </Tab.Panel>
+                <Tab.Panel className="mt-[48px]">
+                  <h3 className="text-colorHeading text-2xl mt-4">
+                    Kerjakan Challenge
                   </h3>
-                  <div className="space-y-5">
-                    <div>
-                      <span className="text-sm font-medium text-colorHeading">
-                        1. Diketahui f(1) = 2, f'(1) = -1, g(1) = 0, dan g'(1) =
-                        1. Jika F(x) = f(x) cos cos (g(x)), maka nilai dari
-                        F'(1) adalah ….
-                      </span>
-                      <input
-                        type="text"
-                        className="mt-2 border-b-[1px] border-r-0 border-l-0 border-t-0 w-full text-sm border-[#DFDFDF] focus:border-primaryColor focus:ring-0"
-                        placeholder="Ketik jawaban kamu disini..."
-                      />
-                    </div>
-                    <div>
-                      <span className="text-sm font-medium text-colorHeading">
-                        2. Diketahui f(1) = 2, f'(1) = -1, g(1) = 0, dan g'(1) =
-                        1. Jika F(x) = f(x) cos cos (g(x)), maka nilai dari
-                        F'(1) adalah ….
-                      </span>
-                      <input
-                        type="text"
-                        className="mt-2 border-b-[1px] border-r-0 border-l-0 border-t-0 w-full text-sm border-[#DFDFDF] focus:border-primaryColor focus:ring-0"
-                        placeholder="Ketik jawaban kamu disini..."
-                      />
-                    </div>
-                    <div>
-                      <span className="text-sm font-medium text-colorHeading">
-                        3. Diketahui f(1) = 2, f'(1) = -1, g(1) = 0, dan g'(1) =
-                        1. Jika F(x) = f(x) cos cos (g(x)), maka nilai dari
-                        F'(1) adalah ….
-                      </span>
-                      <input
-                        type="text"
-                        className="mt-2 border-b-[1px] border-r-0 border-l-0 border-t-0 w-full text-sm border-[#DFDFDF] focus:border-primaryColor focus:ring-0"
-                        placeholder="Ketik jawaban kamu disini..."
-                      />
-                    </div>
-                    <div>
-                      <span className="text-sm font-medium text-colorHeading">
-                        4. Diketahui f(1) = 2, f'(1) = -1, g(1) = 0, dan g'(1) =
-                        1. Jika F(x) = f(x) cos cos (g(x)), maka nilai dari
-                        F'(1) adalah ….
-                      </span>
-                      <input
-                        type="text"
-                        className="mt-2 border-b-[1px] border-r-0 border-l-0 border-t-0 w-full text-sm border-[#DFDFDF] focus:border-primaryColor focus:ring-0"
-                        placeholder="Ketik jawaban kamu disini..."
-                      />
-                    </div>
-                    <div>
-                      <span className="text-sm font-medium text-colorHeading">
-                        5. Diketahui f(1) = 2, f'(1) = -1, g(1) = 0, dan g'(1) =
-                        1. Jika F(x) = f(x) cos cos (g(x)), maka nilai dari
-                        F'(1) adalah ….
-                      </span>
-                      <input
-                        type="text"
-                        className="mt-2 border-b-[1px] border-r-0 border-l-0 border-t-0 w-full text-sm border-[#DFDFDF] focus:border-primaryColor focus:ring-0"
-                        placeholder="Ketik jawaban kamu disini..."
-                      />
-                    </div>
-                    <Link
-                      className="text-white bg-primaryColor inline-block lg:text-sm lg:px-8 lg:py-2 2xl:px-[40px] 2xl:py-[18px] rounded-full"
-                      to="/register"
-                    >
-                      Submit Jawaban
-                    </Link>
-                  </div>
+                  <ul className="list-decimal px-3 mt-5">
+                    <li className="font-medium text-base text-colorHeading">
+                      Bagaimana kita cara mengatasi masalah tersebut? sebutkan
+                      langkah langkah yang harus kita lakukan dari awal hingga
+                      akhir sampai semuanya terjelaskan dan terselesaikan
+                      masalahnya
+                    </li>
+                  </ul>
+                  <textarea
+                    type="text"
+                    className="h-[350px] pt-[24px] pl-[24px] w-full mt-4 rounded-[20px] border-[1px] border-[#efefef] bg-[#FAFBFD] text-[#54586F]"
+                    placeholder="Ketik Jawabanmu disini..."
+                  />
+                  <Link
+                    className="text-white bg-primaryColor inline-block mt-[40px] lg:text-sm lg:px-8 lg:py-2 2xl:px-[40px] 2xl:py-[18px] rounded-full"
+                    to="/register"
+                  >
+                    Submit Jawaban
+                  </Link>
                 </Tab.Panel>
                 <Tab.Panel className="mt-[64px]">
                   <h3 className="text-colorHeading text-2xl mt-[56px] mb-3">
-                    Share Practice ini Keteman Kamu!
+                    Share Challenge ini Keteman Kamu!
                   </h3>
                   <div className="flex items-center justify-around mt-4 mb-4">
                     <div className="bg-[#F5F6FB] hover:bg-[#dee3fc] rounded-full">
@@ -480,4 +413,4 @@ Solved Past Papers"
   );
 };
 
-export default PracticeDetail;
+export default ChallengeDetail;
