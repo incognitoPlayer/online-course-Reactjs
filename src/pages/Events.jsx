@@ -28,7 +28,7 @@ const Events = () => {
           <Navbar profile />
         </div>
         <div className="container mx-auto">
-          <Breadcrumbs practice />
+          <Breadcrumbs practice link="Events" />
           <h2 className="mt-[40px] text-[40px] font-semibold max-w-lg text-colorHeading">
             Kembangkan Skillmu dari Pemateri{" "}
             <span className="text-primaryColor">Terbaik!</span>

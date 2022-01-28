@@ -75,7 +75,10 @@ const Login = () => {
               value={input.password}
             />
             <div className="flex justify-between items-center">
-              <Checkbox title="Remember me" />
+              <Checkbox
+                title="Remember me"
+                titleStyle="2xl:text-[14px] lg:text-xs font-medium"
+              />
               <Link
                 to="/forgotpassword"
                 className="2xl:text-sm lg:text-xs font-medium text-primaryColor underline"

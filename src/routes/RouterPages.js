@@ -11,6 +11,10 @@ import Practice from "../pages/Practice";
 import PracticeDetail from "../pages/PracticeDetail";
 import Events from "../pages/Events";
 import EventsDetail from "../pages/EventsDetail";
+import Leaderboard from "../pages/Leaderboard";
+import Profile from "../pages/Profile";
+import Challenge from "../pages/Challenge";
+import ChallengeDetail from "../pages/ChallengeDetail";
 
 const RouterPages = () => {
   return (
@@ -32,6 +36,10 @@ const RouterPages = () => {
           <Route path="/practice/detail" element={<PracticeDetail />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/detail" element={<EventsDetail />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/challenge" element={<Challenge />} />
+          <Route path="/challenge/detail" element={<ChallengeDetail />} />
         </Routes>
       </Router>
     </>

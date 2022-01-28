@@ -9,6 +9,7 @@ import Dropdown from "../components/Dropdown";
 import Breadcrumbs from "../components/Breadcrumbs";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Practice = () => {
   return (
@@ -25,7 +26,7 @@ const Practice = () => {
           <Navbar profile />
         </div>
         <div className="container mx-auto">
-          <Breadcrumbs practice />
+          <Breadcrumbs practice link="Practice" />
           <h2 className="mt-[40px] text-[40px] font-semibold max-w-md text-colorHeading">
             Dapatkan <span className="text-primaryColor">Ilmu</span> Baru Hari
             ini! <span className="font-normal">🔥</span>
@@ -133,10 +134,12 @@ const Practice = () => {
                   141 solved 11+ Maths Past Papers with detailed Answers and
                   downloadable PDF Question Papers.
                 </p>
-                <button className="bg-white flex justify-between underline transition duration-500 text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
-                  Kerjakan Practice
-                  <img src={right} alt="right" />
-                </button>
+                <Link to="/practice/detail">
+                  <button className="bg-white flex justify-between underline transition duration-500 text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
+                    Kerjakan Practice
+                    <img src={right} alt="right" />
+                  </button>
+                </Link>
                 <span className="absolute -top-3 -right-3 px-3 font-medium py-1 bg-[#FFCCCC] text-[#F03027] rounded-lg">
                   New
                 </span>
@@ -157,10 +160,12 @@ const Practice = () => {
                   141 solved 11+ Maths Past Papers with detailed Answers and
                   downloadable PDF Question Papers.
                 </p>
-                <button className="bg-white flex justify-between underline transition duration-500 text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
-                  Kerjakan Practice
-                  <img src={right} alt="right" />
-                </button>
+                <Link to="/practice/detail">
+                  <button className="bg-white flex justify-between underline transition duration-500 text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
+                    Kerjakan Practice
+                    <img src={right} alt="right" />
+                  </button>
+                </Link>
               </div>
             ))}
           {Array(4)
@@ -178,10 +183,12 @@ const Practice = () => {
                   141 solved 11+ Maths Past Papers with detailed Answers and
                   downloadable PDF Question Papers.
                 </p>
-                <button className="bg-white flex justify-between underline transition duration-500 text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
-                  Kerjakan Practice
-                  <img src={right} alt="right" />
-                </button>
+                <Link to="/practice/detail">
+                  <button className="bg-white flex justify-between underline transition duration-500 text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
+                    Kerjakan Practice
+                    <img src={right} alt="right" />
+                  </button>
+                </Link>
               </div>
             ))}
           {Array(4)
@@ -199,10 +206,12 @@ const Practice = () => {
                   141 solved 11+ Maths Past Papers with detailed Answers and
                   downloadable PDF Question Papers.
                 </p>
-                <button className="bg-white flex justify-between underline transition duration-500   text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
-                  Kerjakan Practice
-                  <img src={right} alt="right" />
-                </button>
+                <Link to="/practice/detail">
+                  <button className="bg-white flex justify-between underline transition duration-500 text-primaryColor border-none py-2 w-full 2xl:text-base lg:text-sm font-medium mt-[32px]">
+                    Kerjakan Practice
+                    <img src={right} alt="right" />
+                  </button>
+                </Link>
                 <span className="absolute -top-3 -right-3 px-3 font-medium py-1 bg-[#E1FFC2] text-[#588926] rounded-lg">
                   Done
                 </span>
